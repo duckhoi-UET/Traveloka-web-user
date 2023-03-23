@@ -66,7 +66,6 @@ export default {
   },
 
   buildModules: [
-    "@nuxt/postcss8",
     "@nuxtjs/fontawesome",
     "@nuxtjs/tailwindcss",
     "@nuxtjs/google-analytics",
