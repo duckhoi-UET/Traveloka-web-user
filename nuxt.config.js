@@ -123,10 +123,12 @@ export default {
 
   build: {
     postcss: {
-      plugins: {
-        tailwindcss: "tailwind.config.js",
-        autoprefixer: {},
-        ...(process.env.APP_ENV === "production" ? { cssnano: {} } : {}),
+      postcssOptions: {
+        plugins: {
+          tailwindcss: "tailwind.config.js",
+          autoprefixer: {},
+          ...(process.env.APP_ENV === "production" ? { cssnano: {} } : {}),
+        },
       },
     },
     loaders: {
@@ -160,4 +162,3 @@ export default {
     RSA_PUBLIC_KEY: process.env.RSA_PUBLIC_KEY,
   },
 };
-
