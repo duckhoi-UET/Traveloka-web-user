@@ -135,7 +135,7 @@ export default {
       this.$router.push("/login");
     },
     handleScroll(event) {
-      if (window.scrollY > 500) {
+      if (window.scrollY > 400) {
         this.isShowHeader = true;
       } else {
         this.isShowHeader = false;

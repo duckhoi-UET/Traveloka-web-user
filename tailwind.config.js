@@ -24,6 +24,7 @@ module.exports = {
       current: "currentColor",
       black: colors.black,
       white: colors.white,
+
       prim: {
         100: "#07209F",
         90: "#2ea1ff",
