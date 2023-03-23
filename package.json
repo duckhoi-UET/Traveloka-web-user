@@ -39,8 +39,8 @@
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
     "node-sass": "^6.0.1",
-    "postcss": "^8.4.4",
     "sass-loader": "^10.1.1",
     "tailwindcss": "^3.0.1"
   }
 }
+
