@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-[400px]">
+  <div>
     <div class="flex gap-6">
       <div class="flex gap-4 border-r border-r-gray-40 pr-3">
         <img src="/images/icon/1.png" class="object-contain" alt="" />

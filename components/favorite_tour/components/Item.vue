@@ -8,7 +8,9 @@
         :src="data.image"
       />
       <div>
-        <h4 class="text-xl font-semibold">
+        <h4
+          class="text-xl font-semibold text-blue-60 hover:underline hover:text-red-100"
+        >
           {{ data.title }}
         </h4>
         <div class="flex justify-between items-center">
