@@ -37,6 +37,8 @@
     </div>
 
     <FavoriteTour></FavoriteTour>
+    <FavoriteTour></FavoriteTour>
+    <FavoriteTour></FavoriteTour>
   </div>
 </template>
 
