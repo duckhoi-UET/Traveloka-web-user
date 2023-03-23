@@ -34,11 +34,11 @@ export default {
     return {
       swiperOption: {
         slidesPerView: 4,
-        // autoplay: {
-        //   delay: 3000,
-        //   pauseOnMouseEnter: true,
-        //   disableOnInteraction: false,
-        // },
+        autoplay: {
+          delay: 3000,
+          pauseOnMouseEnter: true,
+          disableOnInteraction: false,
+        },
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
@@ -86,4 +86,3 @@ export default {
   }
 }
 </style>
-
