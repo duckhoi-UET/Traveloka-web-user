@@ -3,7 +3,7 @@
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-  content: [],
+  content: ["./components/**/*.vue", "./pages/**/*.vue", "./layouts/**/*.vue"],
   safelist: [
     {
       pattern: /bg-(prim|blue|orange|red|yellow|gray|green)-100/,
@@ -128,4 +128,3 @@ module.exports = {
   },
   plugins: [require("@tailwindcss/line-clamp")],
 };
-

@@ -34,6 +34,7 @@ export default {
     "@/assets/main.scss",
     "@/assets/ant/main.less",
     "@fortawesome/fontawesome-free/css/all.css",
+    "@/assets/css/tailwind.css",
   ],
 
   plugins: [
@@ -122,15 +123,15 @@ export default {
   },
 
   build: {
-    postcss: {
-      postcssOptions: {
-        plugins: {
-          tailwindcss: "tailwind.config.js",
-          autoprefixer: {},
-          ...(process.env.APP_ENV === "production" ? { cssnano: {} } : {}),
-        },
-      },
-    },
+    // postcss: {
+    //   postcssOptions: {
+    //     plugins: {
+    //       tailwindcss: "tailwind.config.js",
+    //       autoprefixer: {},
+    //       ...(process.env.APP_ENV === "production" ? { cssnano: {} } : {}),
+    //     },
+    //   },
+    // },
     loaders: {
       less: {
         javascriptEnabled: true,
