@@ -1,6 +1,6 @@
 <template>
-  <div class="swiper h-[600px] w-full">
-    <swiper :options="swiperOptions" class="h-[600px] w-full">
+  <div class="swiper max-h-[600px] w-full">
+    <swiper :options="swiperOptions" class="max-h-[600px] w-full">
       <swiper-slide>
         <img src="/images/banner/banner_1.png" class="w-full" alt="" />
       </swiper-slide>
