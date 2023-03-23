@@ -61,3 +61,11 @@ a {
         }
     }
 }
+
+.title-content {
+    @apply text-blue-60 font-bold text-[32px]
+}
+
+.title-sub-content {
+    @apply text-blue-60 text-lg
+}
