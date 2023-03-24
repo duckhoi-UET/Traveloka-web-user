@@ -1,5 +1,7 @@
 <template>
-  <div class="footer w-full min-h-max bg-prim-10 p-4 md:p-10">
+  <div
+    class="footer w-full min-h-max bg-[#333] p-4 md:p-10 border-t border-t-gray-60 shadow-md"
+  >
     <div
       class="container max-w-[1200px] mx-auto flex flex-col gap-4 md:gap-14 lg:gap-6"
     >
@@ -33,17 +35,21 @@
               </div>
             </div>
             <div
-              class="mt-4 text-base md:text-xl uppercase text-prim-100 font-semibold text-center"
+              class="mt-4 text-base md:text-xl uppercase text-[#eee] font-semibold text-center"
             >
               Tải ứng dụng
             </div>
           </div>
           <div class="space-y-2">
-            <div class="font-semibold text-base md:text-xl text-prim-100">
+            <div class="font-semibold text-base md:text-xl text-[#eee]">
               Liên hệ
             </div>
-            <div>Hotline: <a href="tel:0962462692">0962462692</a></div>
-            <div>Email: <a href="to:cskh@travel.vn">cskh@travel.vn</a></div>
+            <div class="!text-[#888]">
+              Hotline: <a href="tel:0962462692">0962462692</a>
+            </div>
+            <div class="!text-[#888]">
+              Email: <a href="to:cskh@travel.vn">cskh@travel.vn</a>
+            </div>
           </div>
         </div>
         <div
@@ -52,7 +58,7 @@
           class="column flex flex-col gap-5"
         >
           <div
-            class="font-semibold text-base md:text-xl text-prim-100 uppercase line-clamp-1"
+            class="font-semibold text-base md:text-xl text-[#eee] uppercase line-clamp-1"
           >
             {{ item.title }}
           </div>
@@ -61,7 +67,7 @@
               <li v-for="(link, _index) of item.links" :key="_index">
                 <a
                   :href="link.value"
-                  class="hover:underline hover:decoration-1"
+                  class="hover:underline hover:decoration-1 !text-[#888]"
                   >{{ link.label }}</a
                 >
               </li>
@@ -69,34 +75,32 @@
           </div>
         </div>
         <div class="column flex flex-col gap-5">
-          <div
-            class="font-semibold text-base md:text-xl text-prim-100 uppercase"
-          >
+          <div class="font-semibold text-base md:text-xl text-[#eee] uppercase">
             Theo dõi chúng tôi
           </div>
 
           <div class="socials flex gap-6 text-3xl">
             <a
-              class="opacity-70 hover:opacity-100"
+              class="opacity-70 !text-[#eee] hover:opacity-100"
               href="https://www.facebook.com/dulichcattour/"
               target="_blank"
               rel="nofollow"
               ><i class="fab fa-facebook"></i
             ></a>
             <a
-              class="opacity-70 hover:opacity-100"
+              class="opacity-70 !text-[#eee] hover:opacity-100"
               target="_blank"
               rel="nofollow"
               ><i class="fab fa-youtube"></i
             ></a>
             <a
-              class="opacity-70 hover:opacity-100"
+              class="opacity-70 !text-[#eee] hover:opacity-100"
               target="_blank"
               rel="nofollow"
               ><i class="fab fa-instagram"></i
             ></a>
             <a
-              class="opacity-70 hover:opacity-100"
+              class="opacity-70 !text-[#eee] hover:opacity-100"
               target="_blank"
               rel="nofollow"
               ><i class="fab fa-twitter"></i
@@ -117,29 +121,31 @@
         </div>
       </div>
 
-      <hr class="border-0 h-px text-prim-100 bg-prim-100" />
+      <hr class="border-0 h-px text-[#eee] bg-prim-100" />
 
       <div class="info flex flex-col lg:flex-row gap-4 md:gap-16 items-center">
         <div class="full lg:flex-1 flex flex-col gap-4 md:gap-8">
-          <div class="title uppercase text-lg text-prim-100 font-semibold">
+          <div class="title uppercase text-lg !text-[#eee] font-semibold">
             CÔNG TY TNHH CTV24
           </div>
           <div class="details gap-3">
             <div class="above gap-3 lg:gap-10">
-              <div class="mst">
+              <div class="mst !text-[#888]">
                 Trụ sở: Tầng 3, số 586 đường Kim Giang, xã Thanh Liệt, Huyện
                 Thanh Trì. Thành phố Hà Nội, Việt Nam
               </div>
-              <div class="issued-by">
+              <div class="issued-by !text-[#888]">
                 Giấy chứng nhận ĐKDN số: 0109993331 do phòng đăng ký kinh doanh
                 - Sở Kế hoạch & Đầu tư Thành phố Hà Nội cấp ngày 11 tháng 05 năm
                 2022.
               </div>
-              <div class="issued-at">
+              <div class="issued-at !text-[#888]">
                 Số điện thoại: <a href="tel:0962462692">0962 462 692</a>
               </div>
             </div>
-            <div>Đại diện theo pháp luật: NGUYỄN ĐỨC KHÔI</div>
+            <div class="!text-[#888]">
+              Đại diện theo pháp luật: NGUYỄN ĐỨC KHÔI
+            </div>
           </div>
         </div>
       </div>

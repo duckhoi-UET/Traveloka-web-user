@@ -101,6 +101,7 @@ module.exports = {
         10: "#E4E7ED",
         5: "#EBEEF5",
         2: "#F2F6FC",
+        1: "#e6eaed",
       },
     },
     fontSize: {
@@ -129,3 +130,4 @@ module.exports = {
   },
   plugins: [require("@tailwindcss/line-clamp")],
 };
+

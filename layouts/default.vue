@@ -1,13 +1,12 @@
 <template>
-  <div class="min-h-screen flex flex-col">
+  <div class="min-h-screen flex flex-col bg-gray-1">
     <Header class="fixed top-0 w-full z-40" />
     <Banner />
 
     <div
       class="container mx-auto max-w-[1200px] flex-grow my-4 xl:my-8 px-4 xl:px-0"
     >
-      <nuxt v-if="!$slots.default" />
-      <slot />
+      <nuxt />
     </div>
     <Footer />
   </div>

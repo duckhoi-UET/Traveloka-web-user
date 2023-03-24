@@ -10,6 +10,7 @@
       <div>
         <h4
           class="text-xl font-semibold text-blue-60 hover:underline hover:text-red-100"
+          @click="goToDetailRoom(data.title)"
         >
           {{ data.title }}
         </h4>
@@ -70,6 +71,11 @@ export default {
     return {
       rating: 3,
     };
+  },
+  methods: {
+    goToDetailRoom(id) {
+      this.$router.push(`/detail-room/${id}`);
+    },
   },
 };
 </script>
