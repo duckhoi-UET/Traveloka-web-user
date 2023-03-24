@@ -28,13 +28,17 @@ export default {
       type: Number,
       default: 5000,
     },
+    autoPlay: {
+      type: Boolean,
+      default: true,
+    },
   },
 
   data() {
     return {
       swiperOption: {
         slidesPerView: 4,
-        autoplay: {
+        autoplay: this.autoPlay && {
           delay: 3000,
           pauseOnMouseEnter: true,
           disableOnInteraction: false,
@@ -86,3 +90,4 @@ export default {
   }
 }
 </style>
+

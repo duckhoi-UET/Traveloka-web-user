@@ -42,6 +42,7 @@
 
     <AttractivePlace></AttractivePlace>
     <FavoriteTour></FavoriteTour>
+    <TravelGuide></TravelGuide>
   </div>
 </template>
 
@@ -49,11 +50,13 @@
 import Banner from "@/components/banner/Banner.vue";
 import FavoriteTour from "@/components/favorite_room";
 import AttractivePlace from "@/components/attractive_place";
+import TravelGuide from "@/components/travel_guide";
 export default {
   components: {
     Banner,
     FavoriteTour,
     AttractivePlace,
+    TravelGuide,
   },
   auth: false,
 

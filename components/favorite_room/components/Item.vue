@@ -41,6 +41,10 @@
             <i class="fas fa-eye text-lg mt-[1px]"></i>
             <span>{{ data.views }}</span>
           </div>
+          <div class="flex items-center gap-2">
+            <i class="fas fa-eye text-lg mt-[1px]"></i>
+            <span>100 lượt/tháng</span>
+          </div>
         </div>
       </div>
 
@@ -77,3 +81,4 @@ export default {
   }
 }
 </style>
+
