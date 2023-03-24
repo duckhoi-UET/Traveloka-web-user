@@ -1,8 +1,10 @@
 <template>
   <div>
-    <div class="flex gap-6">
-      <div class="flex gap-4 border-r border-r-gray-40 pr-3">
-        <img src="/images/icon/1.png" class="object-contain" alt="" />
+    <div class="flex flex-col md:flex-row gap-6">
+      <div
+        class="flex md:flex-col flex-row lg:flex-row gap-4 justify-center md:border-r md:border-r-gray-40 pr-3"
+      >
+        <img src="/images/icon/1.png" class="w-16 object-contain" alt="" />
         <div>
           <h3 class="text-xl text-blue-60 mb-0">Đảm bảo giá tốt nhất</h3>
           <span class="text-blue-60"
@@ -11,8 +13,10 @@
           >
         </div>
       </div>
-      <div class="flex gap-4 border-r border-r-gray-40 pr-3">
-        <img src="/images/icon/2.png" class="object-contain" alt="" />
+      <div
+        class="flex md:flex-col flex-row lg:flex-row gap-4 justify-center md:border-r md:border-r-gray-40 pr-3"
+      >
+        <img src="/images/icon/2.png" class="w-16 object-contain" alt="" />
         <div>
           <h3 class="text-xl text-blue-60 mb-0">
             Dịch vụ tin cậy - Giá trị đích thực
@@ -24,8 +28,8 @@
           >
         </div>
       </div>
-      <div class="flex gap-4">
-        <img src="/images/icon/3.png" class="object-contain" alt="" />
+      <div class="flex md:flex-col flex-row lg:flex-row gap-4 justify-center">
+        <img src="/images/icon/3.png" class="w-16 object-contain" alt="" />
         <div>
           <h3 class="text-xl text-blue-60 mb-0">Đảm bảo chất lượng</h3>
           <span class="text-blue-60"
@@ -36,19 +40,20 @@
       </div>
     </div>
 
-    <FavoriteTour></FavoriteTour>
-    <FavoriteTour></FavoriteTour>
+    <AttractivePlace></AttractivePlace>
     <FavoriteTour></FavoriteTour>
   </div>
 </template>
 
 <script>
 import Banner from "@/components/banner/Banner.vue";
-import FavoriteTour from "@/components/favorite_tour";
+import FavoriteTour from "@/components/favorite_room";
+import AttractivePlace from "@/components/attractive_place";
 export default {
   components: {
     Banner,
     FavoriteTour,
+    AttractivePlace,
   },
   auth: false,
 
@@ -59,3 +64,4 @@ export default {
   },
 };
 </script>
+
