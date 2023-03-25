@@ -4,7 +4,7 @@
     <Banner />
 
     <div
-      class="container mx-auto max-w-[1200px] flex-grow my-4 xl:my-8 px-4 xl:px-0"
+      class="container mx-auto max-w-[1100px] flex-grow my-4 xl:my-8 px-4 xl:px-0"
     >
       <nuxt />
     </div>
@@ -25,4 +25,3 @@ export default {
   },
 };
 </script>
-
