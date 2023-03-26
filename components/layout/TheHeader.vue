@@ -42,7 +42,8 @@
       >
         <i class="fas fa-bell text-lg" />
       </div>
-      <div class="flex items-center gap-2">
+      <div></div>
+      <div class="flex items-center gap-2" v-if="$auth.loggedIn">
         <a-avatar>
           <i class="fas fa-user" />
         </a-avatar>
@@ -53,14 +54,14 @@
               isShowHeader ? 'text-gray-100' : 'text-white drop-shadow-lg'
             "
           >
-            Đức Khôi
+            {{ $auth.user.displayName }}
             <i class="fas fa-chevron-down" />
           </div>
           <template #overlay>
             <a-menu class="!mt-3">
-              <a-menu-item class="!py-2" @click="$refs.updateInfoDialog.open()">
+              <!-- <a-menu-item class="!py-2" @click="$refs.updateInfoDialog.open()">
                 <i class="mr-4 fas fa-user" />Cập nhật thông tin
-              </a-menu-item>
+              </a-menu-item> -->
               <a-menu-item
                 class="!py-2"
                 @click="$refs.updatePasswordDialog.open()"
@@ -73,6 +74,26 @@
             </a-menu>
           </template>
         </a-dropdown>
+      </div>
+      <div v-else class="flex items-center gap-6">
+        <nuxt-link
+          class="font-bold hover:underline !hover:text-red"
+          :class="
+            isShowHeader ? '!text-gray-100' : '!text-white drop-shadow-lg'
+          "
+          to="/register"
+        >
+          Đăng Ký
+        </nuxt-link>
+        <nuxt-link
+          class="font-bold hover:underline !hover:text-red"
+          :class="
+            isShowHeader ? '!text-gray-100' : '!text-white drop-shadow-lg'
+          "
+          to="/login"
+        >
+          Đăng Nhập
+        </nuxt-link>
       </div>
     </div>
     <a-drawer
@@ -131,8 +152,10 @@ export default {
     },
 
     async logout() {
+      this.$nuxt.$loading.start();
       await this.$auth?.logout();
-      this.$router.push("/login");
+      this.$nuxt.$loading.finish();
+      this.$router.push("/");
     },
     handleScroll(event) {
       if (window.scrollY > 400) {

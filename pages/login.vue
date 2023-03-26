@@ -1,17 +1,22 @@
 <template>
-  <div class="flex flex-col items-center">
-    <a-alert
-      v-if="error"
-      class="!mt-3 w-full"
-      :message="error"
-      type="warning"
-      show-icon
-    />
-    <LoginForm
-      :loading="loading"
-      class="!mt-3 min-w-[200px] max-w-md w-full"
-      @submit="login"
-    />
+  <div>
+    <div class="flex flex-col items-center">
+      <a-alert
+        v-if="error"
+        class="!mt-3 w-full"
+        :message="error"
+        type="warning"
+        show-icon
+      />
+      <LoginForm
+        :loading="loading"
+        class="!mt-3 min-w-[200px] max-w-md w-full"
+        @submit="login"
+      />
+    </div>
+    <div class="flex justify-end mt-2">
+      <nuxt-link class="hover:underline" to="/register">Đăng ký</nuxt-link>
+    </div>
   </div>
 </template>
 
@@ -33,50 +38,36 @@ export default {
     };
   },
 
-  mounted() {
-    const { JSEncrypt } = require("jsencrypt");
-    this.encryptor = (message) => {
-      const encrypt = new JSEncrypt();
-      encrypt.setPublicKey(process.env.RSA_PUBLIC_KEY);
-
-      return encrypt.encrypt(message);
-    };
-  },
-
   methods: {
-    login(form) {
-      this.loading = true;
-      this.$auth
-        .loginWith("local", {
-          data: {
-            ...form,
-            password: this.encryptor(form.password),
-          },
-        })
-        .then(async () => {
+    async login(form) {
+      try {
+        this.loading = true;
+        const response = await this.$axios.post(
+          `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${process.env.API_KEY_FIREBASE}`,
+          { ...form, returnSecureToken: true }
+        );
+        if (response) {
+          const { idToken } = response.data;
+          this.$auth.setUserToken(idToken);
+          this.$auth.setStrategy("local");
+          this.$auth.setUser(response.data);
           this.$router.push("/");
-        })
-        .catch((error) => {
-          this.$handleError(error, (_error) => {
-            const errorData = _error?.response?.data;
-
-            if (errorData?.code === 401) {
-              this.error = "Tên đăng nhập hoặc mật khẩu không chính xác";
-              this.$forceUpdate();
-            }
-          });
-        })
-        .finally(() => {
-          this.loading = false;
-        });
+          this.$message.success("Đăng nhập thành công");
+        }
+      } catch (error) {
+        this.$message.error(
+          "Email hoặc mật khẩu không chính xác, vui lòng thử lại!"
+        );
+      } finally {
+        this.loading = false;
+      }
     },
   },
 
   head() {
     return {
-      title: "Đăng nhập | Nuxt Boilerplate",
+      title: "Đăng nhập",
     };
   },
 };
 </script>
-

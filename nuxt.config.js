@@ -81,39 +81,31 @@ export default {
     strategies: {
       local: {
         token: {
-          property: "data.sid",
-          global: true,
-          required: true,
-          name: "auth",
-          maxAge: 60 * 60 * 24 * 30,
-          type: false,
+          property: "data.idToken",
+          type: "Bearer",
+          name: "Authorization",
+          maxAge: 3600,
         },
-        autoLogout: false,
+        refreshToken: {
+          property: "data.refreshToken",
+          data: "refresh_token",
+          maxAge: 30 * 24 * 60 * 60,
+        },
         user: {
-          property: "data.account",
-          autoFetch: true,
+          property: "data",
         },
         endpoints: {
-          login: {
-            url: `${process.env.API_HOST}/user/login`,
-            method: "POST",
-          },
-          logout: {
-            url: `${process.env.API_HOST}/user/logout`,
-            method: "GET",
-          },
-          user: {
-            url: `${process.env.API_HOST}/user/get_profile`,
-            method: "POST",
-          },
-        },
-        redirect: {
-          login: "/login",
-          logout: "/",
-          callback: "/login",
-          home: "/",
+          login: false,
+          logout: false,
+          user: false,
         },
       },
+    },
+    redirect: {
+      login: "/login",
+      logout: "/",
+      callback: "/login",
+      home: "/",
     },
   },
 
@@ -160,6 +152,6 @@ export default {
   env: {
     API_HOST: process.env.API_HOST || "localhost",
     RSA_PUBLIC_KEY: process.env.RSA_PUBLIC_KEY,
+    API_KEY_FIREBASE: process.env.API_KEY_FIREBASE,
   },
 };
-
