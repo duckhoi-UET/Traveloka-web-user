@@ -49,14 +49,20 @@
         </div>
       </div>
 
-      <a-button class="mt-6 !bg-blue-60" type="primary">
+      <a-button
+        class="mt-6 !bg-blue-60"
+        type="primary"
+        @click="handleBookingRoom(data)"
+      >
         <i class="fas fa-calendar-check mr-2"></i>Đặt phòng
       </a-button>
     </a-card>
+    <Booking ref="booking"></Booking>
   </div>
 </template>
 <script>
 import StarRating from "vue-star-rating";
+import Booking from "../modal/Booking.vue";
 export default {
   props: {
     data: {
@@ -66,6 +72,7 @@ export default {
   },
   components: {
     StarRating,
+    Booking,
   },
   data() {
     return {
@@ -75,6 +82,9 @@ export default {
   methods: {
     goToDetailRoom(id) {
       this.$router.push(`/detail-room/${id}`);
+    },
+    handleBookingRoom(item) {
+      this.$refs.booking.open();
     },
   },
 };
@@ -87,4 +97,3 @@ export default {
   }
 }
 </style>
-
