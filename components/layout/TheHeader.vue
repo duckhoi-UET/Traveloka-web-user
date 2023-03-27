@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="flex items-center gap-6">
-      <a href="tel:024 35 683727" class="font-semibold">
+      <a href="tel:0981 125 768" class="font-semibold">
         <i
           class="fas fa-phone-alt"
           :class="isShowHeader ? 'text-gray-100' : 'text-white drop-shadow-lg'"
@@ -32,7 +32,7 @@
         <span
           class="hidden md:inline"
           :class="isShowHeader ? 'text-red-100' : 'text-white drop-shadow-lg'"
-          >024 35 683727</span
+          >0981 125 768</span
         >
       </a>
       <div

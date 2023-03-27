@@ -1,5 +1,6 @@
 <template>
   <div
+    @click="goToBlogPage"
     class="item-travel-guide min-h-[370px] rounded-sm"
     :style="{ backgroundImage: `url(${data.image})` }"
   >
@@ -31,12 +32,18 @@ export default {
       rating: 3,
     };
   },
+  methods: {
+    goToBlogPage() {
+      window.location.href = this.data.link;
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .item-travel-guide {
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 .item-travel-guide {
@@ -67,4 +74,3 @@ export default {
   }
 }
 </style>
-

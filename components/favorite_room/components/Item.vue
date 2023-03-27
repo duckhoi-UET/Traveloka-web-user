@@ -28,6 +28,7 @@
         <div class="flex justify-between mt-2">
           <StarRating
             v-model="data.star"
+            :read-only="true"
             :show-rating="false"
             :star-size="15"
           ></StarRating>

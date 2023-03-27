@@ -82,45 +82,7 @@
         </div>
         <div>
           <h2 class="title">Bình luận</h2>
-          <a-list
-            v-if="comments.length"
-            :data-source="comments"
-            :header="`${comments.length} ${
-              comments.length > 1 ? 'Bình luận' : 'Bình luận'
-            }`"
-            item-layout="horizontal"
-          >
-            <a-list-item slot="renderItem" slot-scope="item, index">
-              <a-comment
-                :author="item.author"
-                :avatar="item.avatar"
-                :content="item.content"
-                :datetime="item.datetime"
-              />
-            </a-list-item>
-          </a-list>
-          <a-comment>
-            <a-avatar
-              slot="avatar"
-              src="https://st3.depositphotos.com/1767687/16607/v/600/depositphotos_166074422-stock-illustration-default-avatar-profile-icon-grey.jpg"
-              alt="Han Solo"
-            />
-            <div slot="content">
-              <a-form-item>
-                <a-textarea :rows="4" :value="value" @change="handleChange" />
-              </a-form-item>
-              <a-form-item>
-                <a-button
-                  html-type="submit"
-                  :loading="submitting"
-                  type="primary"
-                  @click="handleSubmit"
-                >
-                  Bình luận
-                </a-button>
-              </a-form-item>
-            </div>
-          </a-comment>
+          <DetailComment></DetailComment>
         </div>
       </div>
     </div>
@@ -144,7 +106,8 @@ import Tour from "@/components/favorite_room/components/Item.vue";
 import StarRating from "vue-star-rating";
 import SliderDetail from "@/components/common/SliderDetail";
 import Booking from "@/components/favorite_room/modal/Booking.vue";
-import moment from "moment";
+import DetailComment from "@/components/detail/comment";
+
 export default {
   auth: false,
   components: {
@@ -153,20 +116,12 @@ export default {
     Slider,
     Tour,
     Booking,
+    DetailComment,
   },
   data() {
     return {
       star: 5,
-      comments: [
-        {
-          author: "Nguyễn Thị Thúy",
-          avatar:
-            "https://st3.depositphotos.com/1767687/16607/v/600/depositphotos_166074422-stock-illustration-default-avatar-profile-icon-grey.jpg",
-          content:
-            "Là một nơi vô cùng hoàn hảo để nghỉ dưỡng.Nếu quay lại NB nhất định tụi mình sẽ chỉ ở đây. Đặt phòng 2 người nhưng đến sớm lúc 5h sáng chị lễ tân đã cho tụi mình vào hẳn phòng 4 người và không thu thêm phụ phí gì. Từ nước uống, cafe và bữa sáng đều miễn phí. Không khí trong lành yên tĩnh đặc biệt khiến tụi mình thích nhất là sự tận tình của lễ tân.",
-          datetime: moment().fromNow(),
-        },
-      ],
+
       images: [
         "/images/detail/20011220-034e83204b6db50125df61532fda7cdd.png",
         "/images/detail/20011220-8982a40e54f335d9b5350539b0ff7eed.png",
@@ -174,12 +129,7 @@ export default {
         "/images/detail/20011220-dd780a5c9b7a17f78e537b2da6cbb645.png",
         "/images/detail/20011220-d6717fd124f1f4bca1121945b33f32e0.png",
       ],
-      submitting: false,
-      value: "",
-      moment,
-      likes: 0,
-      dislikes: 0,
-      action: null,
+
       tour: [
         {
           title: "Bungalow Double Room",
@@ -245,41 +195,6 @@ export default {
     };
   },
   methods: {
-    handleSubmit() {
-      if (!this.value) {
-        return;
-      }
-
-      this.submitting = true;
-
-      setTimeout(() => {
-        this.submitting = false;
-        this.comments = [
-          {
-            author: "Đức Khôi",
-            avatar:
-              "https://st3.depositphotos.com/1767687/16607/v/600/depositphotos_166074422-stock-illustration-default-avatar-profile-icon-grey.jpg",
-            content: this.value,
-            datetime: moment().fromNow(),
-          },
-          ...this.comments,
-        ];
-        this.value = "";
-      }, 1000);
-    },
-    handleChange(e) {
-      this.value = e.target.value;
-    },
-    like() {
-      this.likes = 1;
-      this.dislikes = 0;
-      this.action = "liked";
-    },
-    dislike() {
-      this.likes = 0;
-      this.dislikes = 1;
-      this.action = "disliked";
-    },
     handleBookingRoom(item) {
       if (this.$auth.loggedIn) {
         this.$refs.booking.open();
