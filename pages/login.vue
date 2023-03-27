@@ -51,6 +51,7 @@ export default {
           this.$auth.setUserToken(idToken);
           this.$auth.setStrategy("local");
           this.$auth.setUser(response.data);
+          sessionStorage.setItem("user", JSON.stringify(response.data));
           this.$router.push("/");
           this.$message.success("Đăng nhập thành công");
         }

@@ -84,7 +84,13 @@ export default {
       this.$router.push(`/detail-room/${id}`);
     },
     handleBookingRoom(item) {
-      this.$refs.booking.open();
+      if (this.$auth.loggedIn) {
+        this.$refs.booking.open();
+      } else {
+        if (confirm("Bạn cần đăng nhâp!") === true) {
+          this.$router.push("/login");
+        }
+      }
     },
   },
 };

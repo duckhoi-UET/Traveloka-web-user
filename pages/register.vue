@@ -1,17 +1,23 @@
 <template>
-  <div class="flex flex-col items-center">
-    <a-alert
-      v-if="error"
-      class="!mt-3 w-full"
-      :message="error"
-      type="warning"
-      show-icon
-    />
-    <Register
-      :loading="loading"
-      class="!mt-3 min-w-[200px] max-w-md w-full"
-      @submit="register"
-    />
+  <div>
+    <div class="flex flex-col items-center">
+      <a-alert
+        v-if="error"
+        class="!mt-3 w-full"
+        :message="error"
+        type="warning"
+        show-icon
+      />
+      <Register
+        :loading="loading"
+        class="!mt-3 min-w-[200px] max-w-md w-full"
+        @submit="register"
+      />
+    </div>
+    <div class="flex justify-between mt-2">
+      <span>Ban đã có tài khoản?</span>
+      <nuxt-link class="hover:underline" to="/login">Đăng nhập</nuxt-link>
+    </div>
   </div>
 </template>
 

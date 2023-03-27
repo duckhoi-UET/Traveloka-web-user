@@ -131,14 +131,24 @@ export default {
         if (valid) {
           try {
             this.loading = true;
-            await this.$api.auth.updatePassword({
-              oldPassword: this.form.oldPassword,
-              newPassword: this.encryptor(this.form.newPassword),
-            });
-            this.$message.success("Cập nhật mật khẩu mới thành công");
-            this.close();
-            await this.$auth.logout();
-            this.$router.push("/login");
+            if (this.form.newPassword !== this.form.newPasswordConfirmation) {
+              this.$message.error("Nhập lại mật khẩu sai, vui lòng thử lại!");
+              return;
+            }
+            const response = await this.$axios.post(
+              `https://identitytoolkit.googleapis.com/v1/accounts:update?key=${process.env.API_KEY_FIREBASE}`,
+              {
+                idToken: this.$auth.user.idToken,
+                password: this.form.newPassword,
+                returnSecureToken: true,
+              }
+            );
+            if (response) {
+              this.$message.success("Cập nhật mật khẩu mới thành công");
+              this.close();
+              await this.$auth.logout();
+              this.$router.push("/login");
+            }
           } catch (error) {
             this.$handleError(error);
           } finally {

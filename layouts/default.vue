@@ -23,5 +23,12 @@ export default {
     Footer,
     Banner,
   },
+  async created() {
+    if (this.$auth.loggedIn) {
+      if (sessionStorage.getItem("user")) {
+        await this.$auth.setUser(JSON.parse(sessionStorage.getItem("user")));
+      }
+    }
+  },
 };
 </script>
