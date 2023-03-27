@@ -21,6 +21,7 @@
       <a-input
         v-model="form.email"
         size="large"
+        autocomplete="off"
         placeholder="Email"
         @keyup.native.enter="handleSubmit"
       >
@@ -33,6 +34,7 @@
       <a-input-password
         v-model="form.password"
         size="large"
+        autocomplete="off"
         placeholder="Mật khẩu"
         @keyup.native.enter="handleSubmit"
       >
@@ -120,17 +122,17 @@ export default {
 
   methods: {
     handleSubmit() {
-      if (this.form.password !== this.form.rePassword) {
-        this.$message.error(
-          "Mật khẩu đã nhập không chính xác, vui lòng thử lại!"
-        );
-      } else {
-        this.$refs.form.validate(async (valid) => {
-          if (valid) {
+      this.$refs.form.validate(async (valid) => {
+        if (valid) {
+          if (this.form.password !== this.form.rePassword) {
+            this.$message.error(
+              "Mật khẩu đã nhập không chính xác, vui lòng thử lại!"
+            );
+          } else {
             this.$emit("submit", this.form);
           }
-        });
-      }
+        }
+      });
     },
   },
 };
