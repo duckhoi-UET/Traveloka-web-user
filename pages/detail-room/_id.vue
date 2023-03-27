@@ -134,6 +134,7 @@
         </swiper-slide>
       </template>
     </Slider>
+    <Booking ref="booking"></Booking>
   </div>
 </template>
 
@@ -142,6 +143,7 @@ import Slider from "@/components/common/Slider";
 import Tour from "@/components/favorite_room/components/Item.vue";
 import StarRating from "vue-star-rating";
 import SliderDetail from "@/components/common/SliderDetail";
+import Booking from "@/components/favorite_room/modal/Booking.vue";
 import moment from "moment";
 export default {
   auth: false,
@@ -150,6 +152,7 @@ export default {
     StarRating,
     Slider,
     Tour,
+    Booking,
   },
   data() {
     return {
@@ -276,6 +279,15 @@ export default {
       this.likes = 0;
       this.dislikes = 1;
       this.action = "disliked";
+    },
+    handleBookingRoom(item) {
+      if (this.$auth.loggedIn) {
+        this.$refs.booking.open();
+      } else {
+        if (confirm("Bạn cần đăng nhâp!") === true) {
+          this.$router.push("/login");
+        }
+      }
     },
   },
   head() {
