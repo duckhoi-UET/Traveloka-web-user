@@ -2,13 +2,13 @@
   <div class="flex justify-between h-screen">
     <div
       class="w-1/2 hidden md:block !bg-cover !bg-center"
-      style="background: url('/images/auth-bg.png')"
+      style="background: url('/images/traveloka.jpg')"
     />
     <div class="w-screen md:w-1/2 flex flex-col items-center mx-4 my-4">
       <div class="flex-grow flex flex-col items-center justify-center">
-        <img class="w-72" src="/images/logo-3.png" />
+        <img class="w-72" src="/images/logo-card.png" />
         <div class="mt-4 mb-12 text-gray-80 text-center">
-          Hệ thống quản lý khách sạn trên nền tảng điện toán đám mây
+          Luôn mang lại cho bạn những trải nghiệm đáng nhớ!
         </div>
         <nuxt class="w-full" />
       </div>
