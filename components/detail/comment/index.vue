@@ -51,7 +51,7 @@
             <span>
               {{ item.content }}
             </span>
-            <div v-if="item.images?.length" class="flex gap-6 mt-4">
+            <div v-if="item.images?.length" class="flex gap-6 flex-wrap mt-4">
               <img
                 v-for="(image, index) in item.images"
                 :key="index"
