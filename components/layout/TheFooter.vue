@@ -19,14 +19,14 @@
               </div>
               <div class="flex flex-col gap-2">
                 <a
-                  href="https://play.google.com/store/apps/details?id=com.flextech.ctv24h"
+                  href="#"
                   target="_blank"
                   class="google-play w-40 h-[42px] cursor-pointer"
                 >
                   <img src="/images/footer/google-play.png" />
                 </a>
                 <a
-                  href="https://apps.apple.com/vn/app/ctv24/id1627223177"
+                  href="#"
                   target="_blank"
                   class="app-store w-40 h-[42px] cursor-pointer"
                 >
