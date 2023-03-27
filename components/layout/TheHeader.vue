@@ -9,10 +9,14 @@
   >
     <div>
       <div class="md:hidden cursor-pointer" @click="toggleSidebar">
-        <i class="fas fa-bars text-lg" />
+        <i
+          class="fas fa-bars text-lg"
+          :class="isShowHeader ? '' : 'text-white drop-shadow-lg'"
+        />
       </div>
       <div
-        class="hidden lg:block font-semibold text-xl"
+        class="hidden md:block font-semibold text-xl hover:cursor-pointer"
+        @click="$router.push('/')"
         :class="isShowHeader ? 'text-prim-100' : 'text-white drop-shadow-lg'"
       >
         <img v-if="isShowHeader" src="/images/logo.svg" class="w-32" alt="" />
