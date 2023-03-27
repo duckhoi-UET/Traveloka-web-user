@@ -20,6 +20,15 @@
         </swiper-slide>
       </template>
     </Slider>
+    <div
+      class="flex justify-center items-center mt-6 text-blue-60 text-xl hover:cursor-pointer"
+    >
+      <span
+        class="border border-blue-60 font-semibold px-10 py-2 rounded-lg hover:bg-blue-60 hover:text-white"
+      >
+        Xem tất cả
+      </span>
+    </div>
   </div>
 </template>
 
@@ -43,6 +52,7 @@ export default {
           oldPrice: "909.000",
           image: "/images/Tour/1.png",
           views: "2.467",
+          book: "1.233",
         },
         {
           title: "Bungalow Triple Room",
@@ -53,6 +63,7 @@ export default {
           oldPrice: "1.215.000",
           image: "/images/Tour/2-2.png",
           views: "4.467",
+          book: "2.233",
         },
         {
           title: "Bungalow Family Room",
@@ -63,6 +74,7 @@ export default {
           oldPrice: "1.620.000",
           image: "/images/Tour/3.png",
           views: "1.427",
+          book: "933",
         },
         {
           title: "Cozy Superior Room",
@@ -73,6 +85,7 @@ export default {
           oldPrice: "2.237.509",
           image: "/images/Tour/4.png",
           views: "3.407",
+          book: "2.233",
         },
         {
           title: "Spacious Deluxe Room",
@@ -83,6 +96,7 @@ export default {
           oldPrice: "2.397.332",
           image: "/images/Tour/5.png",
           views: "5.467",
+          book: "3.233",
         },
         {
           title: "Premier Executive Room",
@@ -93,6 +107,7 @@ export default {
           oldPrice: "3.406.205",
           image: "/images/Tour/6.png",
           views: "6.467",
+          book: "4.434",
         },
       ],
     };
@@ -101,4 +116,3 @@ export default {
 </script>
 
 <style></style>
-

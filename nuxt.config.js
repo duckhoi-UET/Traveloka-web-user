@@ -17,7 +17,7 @@ export default {
   },
 
   head: {
-    title: "Travel Around",
+    title: "Traveloka",
     htmlAttrs: {
       lang: "en",
     },

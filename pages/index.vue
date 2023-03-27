@@ -42,7 +42,21 @@
 
     <AttractivePlace></AttractivePlace>
     <FavoriteTour></FavoriteTour>
+    <div class="mt-6">
+      <img
+        class="rounded-md"
+        src="/images/Ads/1679649185156-d1f0ae436ff244b389556b428a0d0a17.png"
+        alt=""
+      />
+    </div>
     <TravelGuide></TravelGuide>
+    <div class="mt-6 flex flex-col gap-6">
+      <img
+        class="rounded-md"
+        src="/images/Ads/1679539843354-02e34ffdcfc41abd14696a991ae2c90e.png"
+        alt=""
+      />
+    </div>
   </div>
 </template>
 
@@ -62,9 +76,8 @@ export default {
 
   head() {
     return {
-      title: "Hệ thống quản trị khách sạn",
+      title: "Traveloka - Điểm đến của mọi nhà",
     };
   },
 };
 </script>
-

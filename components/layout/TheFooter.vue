@@ -126,7 +126,7 @@
       <div class="info flex flex-col lg:flex-row gap-4 md:gap-16 items-center">
         <div class="full lg:flex-1 flex flex-col gap-4 md:gap-8">
           <div class="title uppercase text-lg !text-[#eee] font-semibold">
-            CÔNG TY TNHH CTV24
+            TRAVELOKA
           </div>
           <div class="details gap-3">
             <div class="above gap-3 lg:gap-10">
@@ -135,9 +135,9 @@
                 Thanh Trì. Thành phố Hà Nội, Việt Nam
               </div>
               <div class="issued-by !text-[#888]">
-                Giấy chứng nhận ĐKDN số: 0109993331 do phòng đăng ký kinh doanh
-                - Sở Kế hoạch & Đầu tư Thành phố Hà Nội cấp ngày 11 tháng 05 năm
-                2022.
+                Giấy chứng nhận ĐKDN số: 01651254 do phòng đăng ký kinh doanh -
+                Sở Kế hoạch & Đầu tư Thành phố Hà Nội cấp ngày 11 tháng 03 năm
+                2023.
               </div>
               <div class="issued-at !text-[#888]">
                 Số điện thoại: <a href="tel:0962462692">0962 462 692</a>
@@ -178,4 +178,3 @@ export default {
   //   },
 };
 </script>
-

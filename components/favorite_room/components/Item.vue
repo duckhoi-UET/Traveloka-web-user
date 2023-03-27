@@ -3,9 +3,10 @@
     <a-card hoverable class="min-h-[370px]">
       <img
         slot="cover"
-        class="object-cover h-[180px] w-full"
+        class="object-cover h-[180px] w-full cursor-pointer"
         alt="example"
         :src="data.image"
+        @click="goToDetailRoom(data.title)"
       />
       <div>
         <h4
@@ -43,8 +44,8 @@
             <span>{{ data.views }}</span>
           </div>
           <div class="flex items-center gap-2">
-            <i class="fas fa-eye text-lg mt-[1px]"></i>
-            <span>100 lượt/tháng</span>
+            <i class="fas fa-user-check text-lg mt-[1px]"></i>
+            <span>{{ data.book }} lượt/tháng</span>
           </div>
         </div>
       </div>

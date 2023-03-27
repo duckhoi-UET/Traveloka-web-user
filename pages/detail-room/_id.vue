@@ -2,7 +2,16 @@
   <div>
     <div class="bg-white shadow-md rounded-sm p-4">
       <div class="border-b border-b-gray-40 mb-4">
-        <h2 class="text-2xl font-bold !mb-1">Tam Coc Valley Bungalow</h2>
+        <div class="flex justify-between">
+          <h2 class="text-2xl font-bold !mb-1">{{ $route.params.id }}</h2>
+          <a-button
+            class="!bg-blue-60"
+            type="primary"
+            @click="handleBookingRoom(data)"
+          >
+            <i class="fas fa-calendar-check mr-2"></i>Đặt phòng
+          </a-button>
+        </div>
         <StarRating
           v-model="star"
           :show-rating="false"
@@ -27,7 +36,7 @@
             khách đến thăm Ninh Thắng. khách sạn này rất dễ tìm bởi vị trí đắc
             địa, nằm gần với nhiều tiện ích công cộng.
           </span>
-          <h2 class="title">Thông tin về Tam Coc Valley Bungalow</h2>
+          <h2 class="title">Thông tin về {{ $route.params.id }}</h2>
           <span>
             Vị trí Lưu trú tại Tam Coc Valley Bungalow là một lựa chọn đúng đắn
             khi quý khách đến thăm Ninh Thắng. khách sạn này rất dễ tìm bởi vị
@@ -268,6 +277,11 @@ export default {
       this.dislikes = 1;
       this.action = "disliked";
     },
+  },
+  head() {
+    return {
+      title: `Traveloka - ${this.$route.params.id}`,
+    };
   },
 };
 </script>
