@@ -15,7 +15,8 @@
         class="hidden lg:block font-semibold text-xl"
         :class="isShowHeader ? 'text-prim-100' : 'text-white drop-shadow-lg'"
       >
-        Hệ thống quản trị khách sạn
+        <img v-if="isShowHeader" src="/images/logo.svg" class="w-32" alt="" />
+        <img v-else src="/images/logo.png" class="w-32" alt="" />
       </div>
     </div>
     <div class="flex items-center gap-6">

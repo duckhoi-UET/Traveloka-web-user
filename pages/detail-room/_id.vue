@@ -17,7 +17,7 @@
         </div>
       </div>
       <div>
-        <SliderDetail></SliderDetail>
+        <SliderDetail :images="images"></SliderDetail>
       </div>
       <div class="px-2">
         <div>
@@ -154,6 +154,13 @@ export default {
             "Là một nơi vô cùng hoàn hảo để nghỉ dưỡng.Nếu quay lại NB nhất định tụi mình sẽ chỉ ở đây. Đặt phòng 2 người nhưng đến sớm lúc 5h sáng chị lễ tân đã cho tụi mình vào hẳn phòng 4 người và không thu thêm phụ phí gì. Từ nước uống, cafe và bữa sáng đều miễn phí. Không khí trong lành yên tĩnh đặc biệt khiến tụi mình thích nhất là sự tận tình của lễ tân.",
           datetime: moment().fromNow(),
         },
+      ],
+      images: [
+        "/images/detail/20011220-034e83204b6db50125df61532fda7cdd.png",
+        "/images/detail/20011220-8982a40e54f335d9b5350539b0ff7eed.png",
+        "/images/detail/20011220-cbca140e39a80481d79b49d37811e628.png",
+        "/images/detail/20011220-dd780a5c9b7a17f78e537b2da6cbb645.png",
+        "/images/detail/20011220-d6717fd124f1f4bca1121945b33f32e0.png",
       ],
       submitting: false,
       value: "",

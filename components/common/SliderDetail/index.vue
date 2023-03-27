@@ -5,36 +5,10 @@
       class="gallery-top h-[400px] rounded-t-sm"
       ref="swiperTop"
     >
-      <swiper-slide
-        ><img
-          src="/images/banner/14021258.jpg"
-          class="w-full h-full object-cover"
-          alt=""
+      <swiper-slide v-for="(item, index) in images" :key="index"
+        ><img :src="item" class="w-full h-full object-cover" alt=""
       /></swiper-slide>
-      <swiper-slide
-        ><img
-          src="/images/banner/baidinh.jpg"
-          class="w-full h-full object-cover"
-          alt=""
-      /></swiper-slide>
-      <swiper-slide
-        ><img
-          src="/images/banner/banner_3.jpg"
-          class="w-full h-full object-cover"
-          alt=""
-      /></swiper-slide>
-      <swiper-slide
-        ><img
-          src="/images/banner/banner_1.png"
-          class="w-full h-full object-cover"
-          alt=""
-      /></swiper-slide>
-      <swiper-slide
-        ><img
-          src="/images/banner/14021258.jpg"
-          class="w-full h-full object-cover"
-          alt=""
-      /></swiper-slide>
+
       <div
         class="swiper-button-next swiper-button-white"
         slot="button-next"
@@ -50,41 +24,20 @@
       class="gallery-thumbs h-[150px] rounded-b-sm"
       ref="swiperThumbs"
     >
-      <swiper-slide
-        ><img
-          src="/images/banner/14021258.jpg"
-          class="w-full h-full object-cover"
-          alt=""
-      /></swiper-slide>
-      <swiper-slide
-        ><img
-          src="/images/banner/baidinh.jpg"
-          class="w-full h-full object-cover"
-          alt=""
-      /></swiper-slide>
-      <swiper-slide
-        ><img
-          src="/images/banner/banner_3.jpg"
-          class="w-full h-full object-cover"
-          alt=""
-      /></swiper-slide>
-      <swiper-slide
-        ><img
-          src="/images/banner/banner_1.png"
-          class="w-full h-full object-cover"
-          alt=""
-      /></swiper-slide>
-      <swiper-slide
-        ><img
-          src="/images/banner/14021258.jpg"
-          class="w-full h-full object-cover"
-          alt=""
+      <swiper-slide v-for="(item, index) in images" :key="index"
+        ><img :src="item" class="w-full h-full object-cover" alt=""
       /></swiper-slide>
     </swiper>
   </div>
 </template>
 <script>
 export default {
+  props: {
+    images: {
+      type: Array,
+      default: [],
+    },
+  },
   data() {
     return {
       swiperOptionTop: {
