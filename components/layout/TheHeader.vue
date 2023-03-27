@@ -159,6 +159,7 @@ export default {
     async logout() {
       this.$nuxt.$loading.start();
       await this.$auth?.logout();
+      sessionStorage.removeItem("user");
       this.$nuxt.$loading.finish();
       this.$router.push("/");
     },
