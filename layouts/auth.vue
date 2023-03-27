@@ -4,7 +4,13 @@
       class="w-1/2 hidden md:block !bg-cover !bg-center"
       style="background: url('/images/traveloka.jpg')"
     />
+
     <div class="w-screen md:w-1/2 flex flex-col items-center mx-4 my-4">
+      <div class="flex !justify-end">
+        <nuxt-link to="/"
+          >Quay lại trang chủ <i class="fas fa-arrow-right"></i
+        ></nuxt-link>
+      </div>
       <div class="flex-grow flex flex-col items-center justify-center">
         <img class="w-72" src="/images/logo-card.png" />
         <div class="mt-4 mb-12 text-gray-80 text-center">
