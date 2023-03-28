@@ -10,32 +10,6 @@
     >
       <a-list-item>
         <a-comment v-for="(item, index) in comments" :key="index">
-          <!-- <template slot="actions">
-            <span key="comment-basic-like">
-              <a-tooltip title="Like">
-                <a-icon
-                  type="like"
-                  :theme="action === 'liked' ? 'filled' : 'outlined'"
-                  @click="like"
-                />
-              </a-tooltip>
-              <span style="padding-left: '8px'; cursor: 'auto'">
-                {{ likes }}
-              </span>
-            </span>
-            <span key="comment-basic-dislike">
-              <a-tooltip title="Dislike">
-                <a-icon
-                  type="dislike"
-                  :theme="action === 'disliked' ? 'filled' : 'outlined'"
-                  @click="dislike"
-                />
-              </a-tooltip>
-              <span style="padding-left: '8px'; cursor: 'auto'">
-                {{ dislikes }}
-              </span>
-            </span>
-          </template> -->
           <a slot="author"
             >{{ item.author }}
             <StarRating
@@ -56,7 +30,7 @@
                 v-for="(image, index) in item.images"
                 :key="index"
                 :src="image"
-                class="object-contain max-w-[100px] cursor-pointer"
+                class="object-contain max-w-[150px] cursor-pointer"
                 alt="comment"
                 @click="previewImage(image)"
               />
@@ -71,27 +45,42 @@
         </a-comment>
       </a-list-item>
     </a-list>
+
     <a-comment>
       <a-avatar
         slot="avatar"
         src="https://st3.depositphotos.com/1767687/16607/v/600/depositphotos_166074422-stock-illustration-default-avatar-profile-icon-grey.jpg"
         alt="Han Solo"
       />
+
       <div slot="content">
-        <a-form-item class="!mb-1">
-          <a-textarea :rows="4" :value="value" @change="handleChange" />
-        </a-form-item>
-        <StarRating
-          class="mb-3"
-          v-model="star"
-          :show-rating="false"
-          :star-size="15"
-        ></StarRating>
+        <div class="flex gap-4 items-center ml-1 mb-4 text-lg font-semibold">
+          <span>Đánh giá:</span>
+          <StarRating
+            v-model="star"
+            class="mb-1"
+            :show-rating="false"
+            :star-size="20"
+          ></StarRating>
+        </div>
+
+        <div class="border rounded-md border-gray-40 p-2">
+          <a-form-item class="!mb-1">
+            <a-textarea
+              class="!border-none !outline-none"
+              :rows="4"
+              :value="value"
+              placeholder="Bình luận..."
+              @change="handleChange"
+            />
+          </a-form-item>
+          <UploadFile></UploadFile>
+        </div>
         <a-form-item>
           <a-button
             html-type="submit"
             :loading="submitting"
-            class="!bg-blue-60"
+            class="!bg-blue-60 mt-2"
             type="primary"
             @click="handleSubmit"
           >
@@ -107,11 +96,13 @@
 <script>
 import StarRating from "vue-star-rating";
 import PreviewImage from "@/components/common/PreviewImage";
+import UploadFile from "@/components/detail/upload_file";
 import moment from "moment";
 export default {
   components: {
     PreviewImage,
     StarRating,
+    UploadFile,
   },
   data() {
     return {
@@ -223,5 +214,14 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+textarea {
+  resize: none;
+}
+textarea:focus {
+  border: none;
+  outline: none;
+  box-shadow: unset;
+}
+</style>
 
