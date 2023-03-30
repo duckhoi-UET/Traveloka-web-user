@@ -25,6 +25,7 @@
     >
       <span
         class="border border-blue-60 font-semibold px-10 py-2 rounded-lg hover:bg-blue-60 hover:text-white"
+        @click="goToAllRooms"
       >
         Xem tất cả
       </span>
@@ -112,7 +113,14 @@ export default {
       ],
     };
   },
+  methods: {
+    goToAllRooms() {
+      window.location.href =
+        "https://www.traveloka.com/vi-vn/hotel/detail?spec=31-03-2023.01-04-2023.1.1.HOTEL.3000020011220.Tam%20Coc%20Valley%20Bungalow.2&contexts=%7B%22inventoryRateKey%22%3A%22povEwB3ZzsU2C6pd%2B6MdUwKh3BcjHsHvQbV0EUcyDRFM0tKsNUio4Rxug1zOzHJilcvZa8YdqqIySdppe7dolTIewZlxfjiOGz6oXLTucMvN0%2BgQ3yZPvZcoHwUFNN%2BZpcr%2F%2FNa8o9ElfN8zOYhzzZeg0X586laFpeUViPi9rxCUtTFR67qrm%2BPGUAGAdBe4mhLDdV0WLeT%2FFKfQ0QL8LH02Dvlx%2F8PjYogEE5yzx6g6yOKyKeIDf7jO3GM45O1o1hmSkmz3HiZNSbS8gXb3CDW9nmlhkqLKa4lLkAkZpAEc5mXj8TsTR8cYZF%2B6Rap2MzHRTA23ltYdqQG8gVuxGsx2hCJHuICygbvfdzPcu%2FP5s0RENCoFdb72LkX2indXHX%2FgjvJAXMef7VDSe%2FMsp%2FqbM%2FGZMK2%2BWe8Z4wDWCXFmpc61SwXTm6dr%2FyrjHf6b0j2yMcrctiwr88q0BckX3zr6YNymnTk58iYKaBwFeu9eKx0jA7izbI%2B%2Bg2rqPRLdx0HNTeOsgo2DRHG4NgNm99K86GilTqHjHMsEEFrul1Z8CS%2FWFNqllBTLDfKALgAatbkPrlGHYMvOxUcd8gSuE9olaRmAWbSrbAx4lGVLBha%2FzTvZV0gOgy8QojE2ombEtMM9W5F3LU%2B3MiLXiG%2FcrZ%2BcjOcshP%2FlnzDiU9VoWjc%3D%22%7D&prevSearchId=1761759189734030232&loginPromo=1";
+    },
+  },
 };
 </script>
 
 <style></style>
+
