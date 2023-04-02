@@ -12,8 +12,11 @@
         ></nuxt-link>
       </div>
       <div class="flex-grow flex flex-col items-center justify-center">
-        <img class="w-72" src="/images/logo-card.png" />
-        <div class="mt-4 mb-12 text-gray-80 text-center">
+        <!-- <img class="w-72" src="/images/logo-card.png" /> -->
+        <div class="font-bold text-[#434343] text-4xl mb-0">
+          TamCoc Valley Bungalow
+        </div>
+        <div class="mt-2 mb-12 text-gray-80 text-center">
           Luôn mang lại cho bạn những trải nghiệm đáng nhớ!
         </div>
         <nuxt class="w-full" />

@@ -49,6 +49,7 @@
         alt=""
       />
     </div>
+    <Activities />
     <TravelGuide></TravelGuide>
     <div class="mt-6 flex flex-col gap-6">
       <img
@@ -65,12 +66,14 @@ import Banner from "@/components/banner/Banner.vue";
 import FavoriteTour from "@/components/favorite_room";
 import AttractivePlace from "@/components/attractive_place";
 import TravelGuide from "@/components/travel_guide";
+import Activities from "@/components/activities";
 export default {
   components: {
     Banner,
     FavoriteTour,
     AttractivePlace,
     TravelGuide,
+    Activities,
   },
   auth: false,
 

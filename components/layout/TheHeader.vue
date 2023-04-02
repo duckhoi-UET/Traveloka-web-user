@@ -19,8 +19,11 @@
         @click="$router.push('/')"
         :class="isShowHeader ? 'text-prim-100' : 'text-white drop-shadow-lg'"
       >
-        <img v-if="isShowHeader" src="/images/logo.svg" class="w-32" alt="" />
-        <img v-else src="/images/logo.png" class="w-32" alt="" />
+        <!-- <img v-if="isShowHeader" src="/images/logo.svg" class="w-32" alt="" /> -->
+        <!-- <img src="/images/Tour Travel Business Logo.png" class="w-32" alt="" /> -->
+        <div class="font-bold" :class="isShowHeader ? 'text-[#434343]' : ''">
+          TamCoc Valley Bungalow
+        </div>
       </div>
     </div>
     <div class="flex items-center gap-6">
@@ -82,13 +85,15 @@
       </div>
       <div v-else class="flex items-center gap-6">
         <nuxt-link
-          class="font-bold hover:underline !hover:text-red"
-          :class="
-            isShowHeader ? '!text-gray-100' : '!text-white drop-shadow-lg'
-          "
+          class="font-bold !text-white !hover:text-red"
+          :class="isShowHeader ? '' : ' drop-shadow-lg'"
           to="/register"
         >
-          Đăng Ký
+          <span
+            class="bg-[#0194f3] px-4 py-2 pb-[9px] rounded-md hover:bg-[#007ce8]"
+          >
+            Đăng Ký
+          </span>
         </nuxt-link>
         <nuxt-link
           class="font-bold hover:underline !hover:text-red"
