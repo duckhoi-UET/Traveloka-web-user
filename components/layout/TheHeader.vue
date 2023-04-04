@@ -24,6 +24,9 @@
         <div
           class="font-bold text-3xl"
           :class="isShowHeader ? 'text-[#434343]' : ''"
+          style="
+            font-family: 'Trip Sans VF', 'Trip Sans', Arial, sans-serif !important;
+          "
         >
           TamCoc Valley Bungalow
         </div>
@@ -119,7 +122,14 @@
       <template v-slot:title>
         <div class="flex justify-between items-center">
           <nuxt-link to="/">
-            <div class="font-bold text-[#434343]">TamCoc Valley Bungalow</div>
+            <div
+              class="font-bold text-[#434343]"
+              style="
+                font-family: 'Trip Sans VF', 'Trip Sans', Arial, sans-serif !important;
+              "
+            >
+              TamCoc Valley Bungalow
+            </div>
           </nuxt-link>
         </div>
       </template>

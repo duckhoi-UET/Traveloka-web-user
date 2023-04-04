@@ -34,7 +34,7 @@ export default {
       },
       dataSwiper: [
         {
-          image: "/images/banner/ninh-binh.jpg",
+          image: "/images/banner/du-lich-ninh-binh.jpg",
           slogan: [],
         },
         {
