@@ -21,7 +21,10 @@
       >
         <!-- <img v-if="isShowHeader" src="/images/logo.svg" class="w-32" alt="" /> -->
         <!-- <img src="/images/Tour Travel Business Logo.png" class="w-32" alt="" /> -->
-        <div class="font-bold" :class="isShowHeader ? 'text-[#434343]' : ''">
+        <div
+          class="font-bold text-3xl"
+          :class="isShowHeader ? 'text-[#434343]' : ''"
+        >
           TamCoc Valley Bungalow
         </div>
       </div>

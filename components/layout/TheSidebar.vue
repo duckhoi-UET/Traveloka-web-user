@@ -5,7 +5,7 @@
   >
     <div class="flex justify-between items-center pt-4 px-4">
       <nuxt-link to="/">
-        <img src="/images/logo-card.png" width="150" />
+        <div class="font-bold text-[#434343]">TamCoc Valley Bungalow</div>
       </nuxt-link>
     </div>
     <a-menu
