@@ -19,9 +19,10 @@
         @click="$router.push('/')"
         :class="isShowHeader ? 'text-prim-100' : 'text-white drop-shadow-lg'"
       >
-        <!-- <img v-if="isShowHeader" src="/images/logo.svg" class="w-32" alt="" /> -->
-        <!-- <img src="/images/Tour Travel Business Logo.png" class="w-32" alt="" /> -->
-        <div
+        <img v-if="isShowHeader" src="/images/logo-1.png" class="w-60" alt="" />
+        <img v-else src="/images/logo-2.png" class="w-60" alt="" />
+        <!-- <div
+          v-else
           class="font-bold text-3xl"
           :class="isShowHeader ? 'text-[#434343]' : ''"
           style="
@@ -29,7 +30,7 @@
           "
         >
           TamCoc Valley Bungalow
-        </div>
+        </div> -->
       </div>
     </div>
     <div class="flex items-center gap-6">
@@ -122,14 +123,7 @@
       <template v-slot:title>
         <div class="flex justify-between items-center">
           <nuxt-link to="/">
-            <div
-              class="font-bold text-[#434343]"
-              style="
-                font-family: 'Trip Sans VF', 'Trip Sans', Arial, sans-serif !important;
-              "
-            >
-              TamCoc Valley Bungalow
-            </div>
+            <img src="/images/logo-1.png" class="w-48" alt="" />
           </nuxt-link>
         </div>
       </template>
