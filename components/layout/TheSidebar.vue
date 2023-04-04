@@ -3,16 +3,11 @@
   <div
     class="!w-[260px] bg-white a-the-sidebar-vertical max-h-screen h-full flex flex-col"
   >
-    <div class="flex justify-between items-center pt-4 px-4">
-      <nuxt-link to="/">
-        <div class="font-bold text-[#434343]">TamCoc Valley Bungalow</div>
-      </nuxt-link>
-    </div>
     <a-menu
       :open-keys="openKeys"
       :default-selected-keys="activeKeys"
       :inline-collapsed="collapsed"
-      class="!mt-6 w-[260px] !bg-white flex-grow overflow-y-auto custom-scroll overflow-x-hidden !p-4"
+      class="w-[260px] !bg-white flex-grow overflow-y-auto custom-scroll overflow-x-hidden !p-4"
       mode="inline"
       @click="handleClick"
       @openChange="handleOpenChange"

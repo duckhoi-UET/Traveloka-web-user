@@ -113,8 +113,16 @@
       class="header-sidebar-drawer"
       :visible="sidebarVisible"
       placement="left"
+      :closable="false"
       @close="sidebarVisible = false"
     >
+      <template v-slot:title>
+        <div class="flex justify-between items-center">
+          <nuxt-link to="/">
+            <div class="font-bold text-[#434343]">TamCoc Valley Bungalow</div>
+          </nuxt-link>
+        </div>
+      </template>
       <TheSidebar class="h-full" />
     </a-drawer>
     <UpdateInfoDialog ref="updateInfoDialog" />
