@@ -107,7 +107,7 @@ import StarRating from "vue-star-rating";
 import SliderDetail from "@/components/common/SliderDetail";
 import Booking from "@/components/favorite_room/modal/Booking.vue";
 import DetailComment from "@/components/detail/comment";
-import { mapState } from "vuex";
+import { mapActions, mapState } from "vuex";
 
 export default {
   auth: false,
@@ -195,10 +195,16 @@ export default {
       ],
     };
   },
+  created() {
+    if (sessionStorage.getItem("detailRoom")) {
+      this.setDetailRoom(sessionStorage.getItem("detailRoom"));
+    }
+  },
   computed: {
     ...mapState("room", ["detailRoom"]),
   },
   methods: {
+    ...mapActions("room", ["setDetailRoom"]),
     handleBookingRoom(item) {
       if (this.$auth.loggedIn) {
         this.$refs.booking.open();
@@ -211,8 +217,11 @@ export default {
   },
   head() {
     return {
-      title: `Traveloka - ${this.$route.params.id}`,
+      title: `TAMCOC - ${this.$route.params.id}`,
     };
+  },
+  beforeDestroy() {
+    sessionStorage.removeItem("detailRoom");
   },
 };
 </script>

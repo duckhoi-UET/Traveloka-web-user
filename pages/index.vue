@@ -79,8 +79,9 @@ export default {
 
   head() {
     return {
-      title: "Traveloka - Điểm đến của mọi nhà",
+      title: "TAMCOC - Điểm đến của mọi nhà",
     };
   },
 };
 </script>
+

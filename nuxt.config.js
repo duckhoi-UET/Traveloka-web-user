@@ -17,7 +17,7 @@ export default {
   },
 
   head: {
-    title: "Traveloka",
+    title: "TAMCOC",
     htmlAttrs: {
       lang: "en",
     },
@@ -155,3 +155,4 @@ export default {
     API_KEY_FIREBASE: process.env.API_KEY_FIREBASE,
   },
 };
+

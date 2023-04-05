@@ -6,7 +6,6 @@ export const getters = {};
 
 export const actions = {
   setDetailRoom({ commit }, payload) {
-    console.log(payload);
     commit("SET_DETAIL_ROOM", payload);
   },
 };

@@ -88,6 +88,7 @@ export default {
     ...mapActions("room", ["setDetailRoom"]),
     goToDetailRoom(item) {
       this.setDetailRoom(item);
+      sessionStorage.setItem("detailRoom", JSON.stringify(item));
       const slug = this.convertToSlug(item.title);
       this.$router.push(`/detail-room/${slug}`);
     },
