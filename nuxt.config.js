@@ -15,6 +15,9 @@ export default {
     name: "folding-cube",
     color: "#336CCE",
   },
+  generate: {
+    fallback: true,
+  },
 
   head: {
     title: "TAMCOC",
