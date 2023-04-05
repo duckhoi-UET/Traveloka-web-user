@@ -3,11 +3,11 @@
     <div class="bg-white shadow-md rounded-sm p-4">
       <div class="border-b border-b-gray-40 mb-4">
         <div class="flex justify-between">
-          <h2 class="text-2xl font-bold !mb-1">{{ $route.params.id }}</h2>
+          <h2 class="text-2xl font-bold !mb-1">{{ detailRoom.title }}</h2>
           <a-button
             class="!bg-blue-60"
             type="primary"
-            @click="handleBookingRoom(data)"
+            @click="handleBookingRoom(detailRoom)"
           >
             <i class="fas fa-calendar-check mr-2"></i>Đặt phòng
           </a-button>
@@ -36,7 +36,7 @@
             khách đến thăm Ninh Thắng. khách sạn này rất dễ tìm bởi vị trí đắc
             địa, nằm gần với nhiều tiện ích công cộng.
           </span>
-          <h2 class="title">Thông tin về {{ $route.params.id }}</h2>
+          <h2 class="title">Thông tin về {{ detailRoom.title }}</h2>
           <span>
             Vị trí Lưu trú tại Tam Coc Valley Bungalow là một lựa chọn đúng đắn
             khi quý khách đến thăm Ninh Thắng. khách sạn này rất dễ tìm bởi vị
@@ -107,6 +107,7 @@ import StarRating from "vue-star-rating";
 import SliderDetail from "@/components/common/SliderDetail";
 import Booking from "@/components/favorite_room/modal/Booking.vue";
 import DetailComment from "@/components/detail/comment";
+import { mapState } from "vuex";
 
 export default {
   auth: false,
@@ -193,6 +194,9 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    ...mapState("room", ["detailRoom"]),
   },
   methods: {
     handleBookingRoom(item) {

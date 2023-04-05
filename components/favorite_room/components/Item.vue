@@ -6,12 +6,12 @@
         class="object-cover h-[180px] w-full cursor-pointer"
         alt="example"
         :src="data.image"
-        @click="goToDetailRoom(data.title)"
+        @click="goToDetailRoom(data)"
       />
       <div>
         <h4
           class="text-xl font-semibold text-blue-60 hover:underline hover:text-red-100"
-          @click="goToDetailRoom(data.title)"
+          @click="goToDetailRoom(data)"
         >
           {{ data.title }}
         </h4>
@@ -66,6 +66,7 @@
 import StarRating from "vue-star-rating";
 import Booking from "../modal/Booking.vue";
 import generate from "@/mixins/generate";
+import { mapActions } from "vuex";
 export default {
   props: {
     data: {
@@ -84,8 +85,10 @@ export default {
     };
   },
   methods: {
-    goToDetailRoom(title) {
-      const slug = this.convertToSlug(title);
+    ...mapActions("room", ["setDetailRoom"]),
+    goToDetailRoom(item) {
+      this.setDetailRoom(item);
+      const slug = this.convertToSlug(item.title);
       this.$router.push(`/detail-room/${slug}`);
     },
     handleBookingRoom(item) {
