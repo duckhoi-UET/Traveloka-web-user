@@ -65,6 +65,7 @@
 <script>
 import StarRating from "vue-star-rating";
 import Booking from "../modal/Booking.vue";
+import generate from "@/mixins/generate";
 export default {
   props: {
     data: {
@@ -72,6 +73,7 @@ export default {
       default: null,
     },
   },
+  mixins: [generate],
   components: {
     StarRating,
     Booking,
@@ -82,8 +84,9 @@ export default {
     };
   },
   methods: {
-    goToDetailRoom(id) {
-      this.$router.push(`/detail-room/${id}`);
+    goToDetailRoom(title) {
+      const slug = this.convertToSlug(title);
+      this.$router.push(`/detail-room/${slug}`);
     },
     handleBookingRoom(item) {
       if (this.$auth.loggedIn) {
@@ -105,3 +108,4 @@ export default {
   }
 }
 </style>
+
