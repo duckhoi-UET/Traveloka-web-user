@@ -44,10 +44,10 @@
             <div class="font-semibold text-base md:text-xl text-[#eee]">
               Liên hệ
             </div>
-            <div class="!text-[#888]">
+            <div class="!text-[#888] text-lg">
               Hotline: <a href="tel:0962462692">098 112 57 68</a>
             </div>
-            <div class="!text-[#888]">
+            <div class="!text-[#888] text-lg">
               Email: <a href="to:cskh@travel.vn">tamcoc.valley@gmail.com</a>
             </div>
           </div>
@@ -124,19 +124,25 @@
       <hr class="border-0 h-px text-[#eee] bg-prim-100" />
 
       <div class="info flex flex-col lg:flex-row gap-4 md:gap-16 items-center">
-        <div class="full lg:flex-1 flex flex-col gap-4 md:gap-8">
-          <div class="title uppercase text-lg !text-[#eee] font-semibold">
-            TRAVELOKA
+        <div class="full lg:flex-1 flex flex-col gap-4 md:gap-4">
+          <div class="title uppercase text-xl !text-[#eee] font-semibold">
+            TAMCOC VALLEYBUGAOW
           </div>
           <div class="details gap-3">
             <div class="above gap-3 lg:gap-10">
-              <div class="mst !text-[#888]">Ninh Hải, Ninh Bình, Vietnam</div>
-              <div class="issued-by !text-[#888]">Khu nghỉ dưỡng/Khách sạn</div>
-              <div class="issued-at !text-[#888]">
-                Số điện thoại: <a href="tel:0962462692"> 098 112 57 68</a>
+              <div class="mst !text-[#888] text-lg">
+                Địa chỉ: Ninh Hải, Ninh Bình, Vietnam
+              </div>
+              <div class="issued-by !text-[#888] text-lg">
+                Khu nghỉ dưỡng/Khách sạn
+              </div>
+              <div class="issued-at !text-[#888] text-lg">
+                Số điện thoại: <a href="tel:0962462692 "> 098 112 57 68</a>
               </div>
             </div>
-            <div class="!text-[#888]">Email: tamcoc.valley@gmail.com</div>
+            <div class="!text-[#888] text-lg">
+              Email: tamcoc.valley@gmail.com
+            </div>
           </div>
         </div>
       </div>
