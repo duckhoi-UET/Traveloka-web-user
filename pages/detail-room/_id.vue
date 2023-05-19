@@ -9,7 +9,7 @@
             type="primary"
             @click="handleBookingRoom(detailRoom)"
           >
-            <i class="fas fa-calendar-check mr-2"></i>Đặt phòng
+            <i class="fas fa-calendar-check mr-2"></i>Book a room
           </a-button>
         </div>
         <StarRating
@@ -236,4 +236,3 @@ export default {
   }
 }
 </style>
-

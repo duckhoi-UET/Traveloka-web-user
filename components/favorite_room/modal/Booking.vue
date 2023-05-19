@@ -3,7 +3,7 @@
     class="booking"
     v-model="visible"
     destroy-on-close
-    title="Điền đầy đủ thông tin"
+    title="Provide complete information"
   >
     <a-form-model
       ref="form"
@@ -12,25 +12,25 @@
       layout="vertical"
       :colon="false"
     >
-      <a-form-model-item label="Họ và tên" prop="fullName">
-        <a-input v-model="form.fullName" placeholder="Nhập nội dung" />
+      <a-form-model-item label="Full Name" prop="fullName">
+        <a-input v-model="form.fullName" placeholder="Please enter" />
       </a-form-model-item>
-      <a-form-model-item label="CMND/CCCD" prop="numberCard">
-        <a-input v-model="form.numberCard" placeholder="Nhập nội dung" />
+      <a-form-model-item label="Citizen identification card" prop="numberCard">
+        <a-input v-model="form.numberCard" placeholder="Please enter" />
       </a-form-model-item>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4">
-        <a-form-model-item label="Số điện thoại" prop="mobile">
-          <a-input v-model="form.mobile" placeholder="Nhập nội dung" />
+        <a-form-model-item label="Phone Number" prop="mobile">
+          <a-input v-model="form.mobile" placeholder="Please enter" />
         </a-form-model-item>
         <a-form-model-item label="Email" prop="email">
-          <a-input v-model="form.email" placeholder="Nhập nội dung" />
+          <a-input v-model="form.email" placeholder="Please enter" />
         </a-form-model-item>
       </div>
-      <a-form-model-item label="Chọn ngày" prop="endDate">
+      <a-form-model-item label="Pick Date" prop="endDate">
         <a-range-picker
           :show-time="{ format: 'HH:mm' }"
           format="YYYY-MM-DD HH:mm"
-          :placeholder="['Bắt đầu', 'Kết thúc']"
+          :placeholder="['Start', 'End']"
           class="!w-full"
           @change="onChange"
           @ok="onOk"
@@ -38,14 +38,14 @@
       </a-form-model-item>
     </a-form-model>
     <div slot="footer" class="flex justify-center items-center gap-2">
-      <a-button class="w-28" @click="close"> Hủy bỏ </a-button>
+      <a-button class="w-28" @click="close"> Cancel </a-button>
       <a-button
         :loading="loading"
         class="w-28 !bg-blue-60"
         type="primary"
         @click="onBookingRoom"
       >
-        Đặt phòng
+        Booking
       </a-button>
     </div>
   </a-modal>
@@ -158,4 +158,3 @@ export default {
   }
 }
 </style>
-
