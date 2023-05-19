@@ -45,10 +45,10 @@
               Liên hệ
             </div>
             <div class="!text-[#888]">
-              Hotline: <a href="tel:0962462692">0962462692</a>
+              Hotline: <a href="tel:0962462692">098 112 57 68</a>
             </div>
             <div class="!text-[#888]">
-              Email: <a href="to:cskh@travel.vn">cskh@travel.vn</a>
+              Email: <a href="to:cskh@travel.vn">tamcoc.valley@gmail.com</a>
             </div>
           </div>
         </div>
@@ -130,22 +130,13 @@
           </div>
           <div class="details gap-3">
             <div class="above gap-3 lg:gap-10">
-              <div class="mst !text-[#888]">
-                Trụ sở: Tầng 3, số 586 đường Kim Giang, xã Thanh Liệt, Huyện
-                Thanh Trì. Thành phố Hà Nội, Việt Nam
-              </div>
-              <div class="issued-by !text-[#888]">
-                Giấy chứng nhận ĐKDN số: 01651254 do phòng đăng ký kinh doanh -
-                Sở Kế hoạch & Đầu tư Thành phố Hà Nội cấp ngày 11 tháng 03 năm
-                2023.
-              </div>
+              <div class="mst !text-[#888]">Ninh Hải, Ninh Bình, Vietnam</div>
+              <div class="issued-by !text-[#888]">Khu nghỉ dưỡng/Khách sạn</div>
               <div class="issued-at !text-[#888]">
-                Số điện thoại: <a href="tel:0962462692">0962 462 692</a>
+                Số điện thoại: <a href="tel:0962462692"> 098 112 57 68</a>
               </div>
             </div>
-            <div class="!text-[#888]">
-              Đại diện theo pháp luật: NGUYỄN ĐỨC KHÔI
-            </div>
+            <div class="!text-[#888]">Email: tamcoc.valley@gmail.com</div>
           </div>
         </div>
       </div>

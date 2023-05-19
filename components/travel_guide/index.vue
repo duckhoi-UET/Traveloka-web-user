@@ -29,6 +29,13 @@ export default {
       travel: [
         {
           title:
+            "Tạp chí Forbes: Ninh Bình là “Hạ Long cạn” ẩn chứa nhiều kỳ quan thiên nhiên đẹp",
+          desc: "Hè năm 2023 đang tới, Di sản Văn hóa và thiên nhiên thế giới Tràng An (Ninh Bình) phơi bày vẻ đẹp quyến rũ khác lạ so với mùa xuân vừa qua.",
+          image: "/images/travel/img-3277-7167.jpg",
+          link: "https://nhandan.vn/tap-chi-forbes-ninh-binh-la-ha-long-can-an-chua-nhieu-ky-quan-thien-nhien-dep-post747585.html?fbclid=IwAR0gVqtP7aUDpBwXRiDuLWWt0q8MrMrOtPcsglX8fBB0uI44SmDxqO8tTIw",
+        },
+        {
+          title:
             "Thưởng ngoạn các danh lam thắng cảnh tuyệt sắc trong tour miền Bắc 5N4Đ",
           desc: "Chỉ với 8.790.000 đồng, du khách sẽ được tận hưởng hành trình thưởng ngoạn qua các danh lam thắng cảnh nổi tiếng và xinh đẹp của miền Bắc Việt Nam. Cùng iVIVU khám phá tour miền Bắc 5N4Đ trong bài…",
           image: "/images/travel/Khu-du-lịch-Tràng-An11-370x215.jpg",
