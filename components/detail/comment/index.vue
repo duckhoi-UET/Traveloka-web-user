@@ -40,7 +40,7 @@
             slot="datetime"
             :title="moment().format('YYYY-MM-DD HH:mm:ss')"
           >
-            <span>{{ moment().fromNow() }}</span>
+            <span>{{ item.datetime }}</span>
           </a-tooltip>
         </a-comment>
       </a-list-item>
@@ -131,7 +131,7 @@ export default {
           avatar:
             "https://st3.depositphotos.com/1767687/16607/v/600/depositphotos_166074422-stock-illustration-default-avatar-profile-icon-grey.jpg",
           content: "Great experience, felt right at home",
-          datetime: moment().fromNow(),
+          datetime: "1 ngày trước",
           images: [
             "/images/detail/20011220-034e83204b6db50125df61532fda7cdd.png",
             "/images/detail/20011220-cbca140e39a80481d79b49d37811e628.png",
@@ -143,7 +143,7 @@ export default {
           avatar:
             "https://st3.depositphotos.com/1767687/16607/v/600/depositphotos_166074422-stock-illustration-default-avatar-profile-icon-grey.jpg",
           content: "Wonderful stay with great hosts.",
-          datetime: moment().fromNow(),
+          datetime: "1 ngày trước",
           images: [
             "/images/detail/20011220-034e83204b6db50125df61532fda7cdd.png",
           ],
@@ -155,7 +155,7 @@ export default {
             "https://st3.depositphotos.com/1767687/16607/v/600/depositphotos_166074422-stock-illustration-default-avatar-profile-icon-grey.jpg",
           content:
             "Là một nơi vô cùng hoàn hảo để nghỉ dưỡng.Nếu quay lại NB nhất định tụi mình sẽ chỉ ở đây. Đặt phòng 2 người nhưng đến sớm lúc 5h sáng chị lễ tân đã cho tụi mình vào hẳn phòng 4 người và không thu thêm phụ phí gì. Từ nước uống, cafe và bữa sáng đều miễn phí. Không khí trong lành yên tĩnh đặc biệt khiến tụi mình thích nhất là sự tận tình của lễ tân.",
-          datetime: moment().fromNow(),
+          datetime: "5 ngày trước",
           images: [
             "/images/detail/20011220-034e83204b6db50125df61532fda7cdd.png",
             "/images/detail/20011220-8982a40e54f335d9b5350539b0ff7eed.png",
@@ -168,7 +168,7 @@ export default {
           avatar:
             "https://st3.depositphotos.com/1767687/16607/v/600/depositphotos_166074422-stock-illustration-default-avatar-profile-icon-grey.jpg",
           content: "Pleasantly surprised by the quality.",
-          datetime: moment().fromNow(),
+          datetime: "15 ngày trước",
           images: [
             "/images/detail/20011220-034e83204b6db50125df61532fda7cdd.png",
             "/images/detail/20011220-cbca140e39a80481d79b49d37811e628.png",
@@ -181,7 +181,7 @@ export default {
             "https://st3.depositphotos.com/1767687/16607/v/600/depositphotos_166074422-stock-illustration-default-avatar-profile-icon-grey.jpg",
           content:
             "Dịch vụ rất tốt, view siêu siêu đẹp. Trải nghiệm tuyệt vời ",
-          datetime: moment().fromNow(),
+          datetime: "20 ngày trước",
           images: [
             "/images/detail/20011220-cbca140e39a80481d79b49d37811e628.png",
             "/images/detail/20011220-dd780a5c9b7a17f78e537b2da6cbb645.png",
@@ -195,7 +195,7 @@ export default {
             "https://st3.depositphotos.com/1767687/16607/v/600/depositphotos_166074422-stock-illustration-default-avatar-profile-icon-grey.jpg",
           content:
             "Là một nơi vô cùng hoàn hảo để nghỉ dưỡng.Nếu quay lại NB nhất định tụi mình sẽ chỉ ở đây. Đặt phòng 2 người nhưng đến sớm lúc 5h sáng chị lễ tân đã cho tụi mình vào hẳn phòng 4 người và không thu thêm phụ phí gì. Từ nước uống, cafe và bữa sáng đều miễn phí. Không khí trong lành yên tĩnh đặc biệt khiến tụi mình thích nhất là sự tận tình của lễ tân. 11/10 điểm luôn ạ",
-          datetime: moment().fromNow(),
+          datetime: "30 ngày trước",
           images: [
             "/images/detail/20011220-034e83204b6db50125df61532fda7cdd.png",
             "/images/detail/20011220-8982a40e54f335d9b5350539b0ff7eed.png",
