@@ -115,6 +115,41 @@ export default {
       action: null,
       comments: [
         {
+          author: "Michael",
+          avatar:
+            "https://st3.depositphotos.com/1767687/16607/v/600/depositphotos_166074422-stock-illustration-default-avatar-profile-icon-grey.jpg",
+          content: "Exceeded expectations, highly recommend.",
+          datetime: moment().fromNow(),
+          images: [
+            "/images/detail/20011220-034e83204b6db50125df61532fda7cdd.png",
+            "/images/detail/20011220-cbca140e39a80481d79b49d37811e628.png",
+          ],
+          star: 5,
+        },
+        {
+          author: "Alex",
+          avatar:
+            "https://st3.depositphotos.com/1767687/16607/v/600/depositphotos_166074422-stock-illustration-default-avatar-profile-icon-grey.jpg",
+          content: "Great experience, felt right at home",
+          datetime: moment().fromNow(),
+          images: [
+            "/images/detail/20011220-034e83204b6db50125df61532fda7cdd.png",
+            "/images/detail/20011220-cbca140e39a80481d79b49d37811e628.png",
+          ],
+          star: 5,
+        },
+        {
+          author: "Henry",
+          avatar:
+            "https://st3.depositphotos.com/1767687/16607/v/600/depositphotos_166074422-stock-illustration-default-avatar-profile-icon-grey.jpg",
+          content: "Wonderful stay with great hosts.",
+          datetime: moment().fromNow(),
+          images: [
+            "/images/detail/20011220-034e83204b6db50125df61532fda7cdd.png",
+          ],
+          star: 5,
+        },
+        {
           author: "Nguyễn Thị Thúy",
           avatar:
             "https://st3.depositphotos.com/1767687/16607/v/600/depositphotos_166074422-stock-illustration-default-avatar-profile-icon-grey.jpg",
@@ -124,6 +159,18 @@ export default {
           images: [
             "/images/detail/20011220-034e83204b6db50125df61532fda7cdd.png",
             "/images/detail/20011220-8982a40e54f335d9b5350539b0ff7eed.png",
+            "/images/detail/20011220-cbca140e39a80481d79b49d37811e628.png",
+          ],
+          star: 5,
+        },
+        {
+          author: "Robert",
+          avatar:
+            "https://st3.depositphotos.com/1767687/16607/v/600/depositphotos_166074422-stock-illustration-default-avatar-profile-icon-grey.jpg",
+          content: "Pleasantly surprised by the quality.",
+          datetime: moment().fromNow(),
+          images: [
+            "/images/detail/20011220-034e83204b6db50125df61532fda7cdd.png",
             "/images/detail/20011220-cbca140e39a80481d79b49d37811e628.png",
           ],
           star: 5,
@@ -224,4 +271,3 @@ textarea:focus {
   box-shadow: unset;
 }
 </style>
-
