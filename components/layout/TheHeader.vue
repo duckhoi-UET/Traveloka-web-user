@@ -16,42 +16,51 @@
       </div>
       <div
         class="hidden md:block font-semibold text-xl hover:cursor-pointer"
-        @click="$router.push('/')"
+        @click="onClickLogo"
         :class="isShowHeader ? 'text-prim-100' : 'text-white drop-shadow-lg'"
       >
         <img v-if="isShowHeader" src="/images/logo-1.png" class="w-60" alt="" />
         <img v-else src="/images/logo-2.png" class="w-60" alt="" />
-        <!-- <div
-          v-else
-          class="font-bold text-3xl"
-          :class="isShowHeader ? 'text-[#434343]' : ''"
-          style="
-            font-family: 'Trip Sans VF', 'Trip Sans', Arial, sans-serif !important;
-          "
-        >
-          TamCoc Valley Bungalow
-        </div> -->
       </div>
     </div>
-    <div class="flex items-center gap-6">
-      <a href="tel:0981 125 768" class="font-semibold">
-        <i
-          class="fas fa-phone-alt"
-          :class="isShowHeader ? 'text-gray-100' : 'text-white drop-shadow-lg'"
-        />
-        <span
-          class="hidden md:inline"
-          :class="isShowHeader ? 'text-red-100' : 'text-white drop-shadow-lg'"
-          >0981 125 768</span
-        >
-      </a>
+    <div class="flex items-center gap-6 text-lg">
       <div
-        class="font-semibold"
+        class="font-semibold cursor-pointer hover:underline"
         :class="{ 'text-white drop-shadow-lg': !isShowHeader }"
+        @click="scrollToPlace"
       >
-        <i class="fas fa-question-circle" />
+        <span class="hidden md:inline">Điểm đến</span>
+      </div>
+      <div
+        class="font-semibold cursor-pointer hover:underline"
+        :class="{ 'text-white drop-shadow-lg': !isShowHeader }"
+        @click="scrollToRooms"
+      >
+        <span class="hidden md:inline">Nổi bật</span>
+      </div>
+      <div
+        class="font-semibold cursor-pointer hover:underline"
+        :class="{ 'text-white drop-shadow-lg': !isShowHeader }"
+        @click="scrollToActivities"
+      >
+        <span class="hidden md:inline">Hoạt động</span>
+      </div>
+      <div
+        class="font-semibold cursor-pointer hover:underline"
+        :class="{ 'text-white drop-shadow-lg': !isShowHeader }"
+        @click="scrollToNews"
+      >
+        <span class="hidden md:inline">Tin tức</span>
+      </div>
+      <div
+        class="font-semibold cursor-pointer hover:underline"
+        :class="{ 'text-white drop-shadow-lg': !isShowHeader }"
+        @click="scrollToBottom"
+      >
+        <!-- <i class="fas fa-question-circle" /> -->
         <span class="hidden md:inline">Trợ giúp</span>
       </div>
+
       <div
         :class="isShowHeader ? 'text-warning-100' : 'text-white drop-shadow-lg'"
       >
@@ -184,10 +193,57 @@ export default {
       this.$router.push("/");
     },
     handleScroll(event) {
+      console.log(window.scrollY);
       if (window.scrollY > 400) {
         this.isShowHeader = true;
       } else {
         this.isShowHeader = false;
+      }
+    },
+    scrollToPlace() {
+      window.scrollTo({
+        top: 700,
+        left: 0,
+        behavior: "smooth",
+      });
+    },
+    scrollToRooms() {
+      window.scrollTo({
+        top: 1300,
+        left: 0,
+        behavior: "smooth",
+      });
+    },
+    scrollToActivities() {
+      window.scrollTo({
+        top: 2115,
+        left: 0,
+        behavior: "smooth",
+      });
+    },
+    scrollToNews() {
+      window.scrollTo({
+        top: 3015,
+        left: 0,
+        behavior: "smooth",
+      });
+    },
+    scrollToBottom() {
+      window.scrollTo({
+        top: 3684,
+        left: 0,
+        behavior: "smooth",
+      });
+    },
+    onClickLogo() {
+      if (this.$route.path !== "/") {
+        this.$router.push("/");
+      } else {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "smooth",
+        });
       }
     },
   },

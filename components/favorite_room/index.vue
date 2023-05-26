@@ -13,13 +13,13 @@
         </swiper-slide>
       </template>
     </Slider>
-    <Slider class="mt-4">
+    <!-- <Slider class="mt-4">
       <template v-slot:slider>
         <swiper-slide v-for="(item, index) in tour" :key="index">
           <Tour :data="item"></Tour>
         </swiper-slide>
       </template>
-    </Slider>
+    </Slider> -->
     <div
       class="flex justify-center items-center mt-6 text-blue-60 text-xl hover:cursor-pointer"
     >
@@ -77,39 +77,39 @@ export default {
           views: "1.427",
           book: "933",
         },
-        {
-          title: "Cozy Superior Room",
-          bed: "1 Giường Đôi",
-          person: "2 khách",
-          star: 5,
-          price: "1.678.132",
-          oldPrice: "2.237.509",
-          image: "/images/Tour/4.png",
-          views: "3.407",
-          book: "2.233",
-        },
-        {
-          title: "Spacious Deluxe Room",
-          bed: "1 Giường Đôi",
-          person: "2 khách",
-          star: 5,
-          price: "1.797.999",
-          oldPrice: "2.397.332",
-          image: "/images/Tour/5.png",
-          views: "5.467",
-          book: "3.233",
-        },
-        {
-          title: "Premier Executive Room",
-          bed: "1 Giường Đôi",
-          person: "2 khách",
-          star: 5,
-          price: "2.554.654",
-          oldPrice: "3.406.205",
-          image: "/images/Tour/6.png",
-          views: "6.467",
-          book: "4.434",
-        },
+        // {
+        //   title: "Cozy Superior Room",
+        //   bed: "1 Giường Đôi",
+        //   person: "2 khách",
+        //   star: 5,
+        //   price: "1.678.132",
+        //   oldPrice: "2.237.509",
+        //   image: "/images/Tour/4.png",
+        //   views: "3.407",
+        //   book: "2.233",
+        // },
+        // {
+        //   title: "Spacious Deluxe Room",
+        //   bed: "1 Giường Đôi",
+        //   person: "2 khách",
+        //   star: 5,
+        //   price: "1.797.999",
+        //   oldPrice: "2.397.332",
+        //   image: "/images/Tour/5.png",
+        //   views: "5.467",
+        //   book: "3.233",
+        // },
+        // {
+        //   title: "Premier Executive Room",
+        //   bed: "1 Giường Đôi",
+        //   person: "2 khách",
+        //   star: 5,
+        //   price: "2.554.654",
+        //   oldPrice: "3.406.205",
+        //   image: "/images/Tour/6.png",
+        //   views: "6.467",
+        //   book: "4.434",
+        // },
       ],
     };
   },
@@ -123,4 +123,3 @@ export default {
 </script>
 
 <style></style>
-

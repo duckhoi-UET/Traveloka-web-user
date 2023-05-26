@@ -37,7 +37,7 @@ export default {
   data() {
     return {
       swiperOption: {
-        slidesPerView: 4,
+        slidesPerView: 3,
         autoplay: this.autoPlay && {
           delay: 3000,
           pauseOnMouseEnter: true,
@@ -49,7 +49,7 @@ export default {
         },
         breakpoints: {
           1280: {
-            slidesPerView: 4,
+            slidesPerView: 3,
             spaceBetween: 20,
           },
           1024: {
@@ -90,4 +90,3 @@ export default {
   }
 }
 </style>
-
