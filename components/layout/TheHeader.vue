@@ -36,7 +36,7 @@
         :class="{ 'text-white drop-shadow-lg': !isShowHeader }"
         @click="scrollToRooms"
       >
-        <span class="hidden md:inline">Nổi bật</span>
+        <span class="hidden md:inline">Phòng</span>
       </div>
       <div
         class="font-semibold cursor-pointer hover:underline"
@@ -51,6 +51,13 @@
         @click="scrollToNews"
       >
         <span class="hidden md:inline">Tin tức</span>
+      </div>
+      <div
+        class="font-semibold cursor-pointer hover:underline"
+        :class="{ 'text-white drop-shadow-lg': !isShowHeader }"
+        @click="scrollToService"
+      >
+        <span class="hidden md:inline">Dịch vụ</span>
       </div>
       <div
         class="font-semibold cursor-pointer hover:underline"
@@ -193,7 +200,6 @@ export default {
       this.$router.push("/");
     },
     handleScroll(event) {
-      console.log(window.scrollY);
       if (window.scrollY > 400) {
         this.isShowHeader = true;
       } else {
@@ -228,9 +234,16 @@ export default {
         behavior: "smooth",
       });
     },
-    scrollToBottom() {
+    scrollToService() {
       window.scrollTo({
         top: 3684,
+        left: 0,
+        behavior: "smooth",
+      });
+    },
+    scrollToBottom() {
+      window.scrollTo({
+        top: 4728,
         left: 0,
         behavior: "smooth",
       });

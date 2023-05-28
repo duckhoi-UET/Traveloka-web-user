@@ -58,6 +58,7 @@
         alt=""
       />
     </div>
+    <Services />
   </div>
 </template>
 
@@ -67,6 +68,7 @@ import FavoriteTour from "@/components/favorite_room";
 import AttractivePlace from "@/components/attractive_place";
 import TravelGuide from "@/components/travel_guide";
 import Activities from "@/components/activities";
+import Services from "@/components/service";
 export default {
   components: {
     Banner,
@@ -74,6 +76,7 @@ export default {
     AttractivePlace,
     TravelGuide,
     Activities,
+    Services,
   },
   auth: false,
 
@@ -84,4 +87,3 @@ export default {
   },
 };
 </script>
-
