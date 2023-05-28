@@ -23,7 +23,7 @@
         <img v-else src="/images/logo-2.png" class="w-60" alt="" />
       </div>
     </div>
-    <div class="flex items-center gap-6 text-lg">
+    <div class="flex items-center gap-6 text-xl">
       <div
         class="font-semibold cursor-pointer hover:underline"
         :class="{ 'text-white drop-shadow-lg': !isShowHeader }"
