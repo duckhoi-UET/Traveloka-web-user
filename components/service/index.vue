@@ -29,7 +29,7 @@
       <h3 class="text-3xl capitalize">Ẩm thực</h3>
       <div v-for="(item, index) in foots" :key="index">
         <div class="max-w-[900px] mx-auto underline">
-          <h3 class="text-xl italic">{{ item.title }}</h3>
+          <h3 class="text-[22px] italic">{{ item.title }}</h3>
         </div>
         <div class="flex flex-col items-center mb-6">
           <div class="w-[450px] h-[350px] shadow-lg">
