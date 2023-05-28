@@ -51,13 +51,6 @@
     </div>
     <Activities />
     <TravelGuide></TravelGuide>
-    <div class="mt-6 flex flex-col gap-6">
-      <img
-        class="rounded-md"
-        src="/images/Ads/1679539843354-02e34ffdcfc41abd14696a991ae2c90e.png"
-        alt=""
-      />
-    </div>
     <Services />
   </div>
 </template>

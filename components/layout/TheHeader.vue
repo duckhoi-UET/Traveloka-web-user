@@ -68,11 +68,11 @@
         <span class="hidden md:inline">Trợ giúp</span>
       </div>
 
-      <div
+      <!-- <div
         :class="isShowHeader ? 'text-warning-100' : 'text-white drop-shadow-lg'"
       >
         <i class="fas fa-bell text-lg" />
-      </div>
+      </div> -->
       <div></div>
       <div class="flex items-center gap-2" v-if="$auth.loggedIn">
         <a-avatar>
@@ -106,7 +106,7 @@
           </template>
         </a-dropdown>
       </div>
-      <div v-else class="flex items-center gap-6">
+      <!-- <div v-else class="flex items-center gap-6">
         <nuxt-link
           class="font-bold !text-white !hover:text-red"
           :class="isShowHeader ? '' : ' drop-shadow-lg'"
@@ -127,7 +127,7 @@
         >
           Đăng Nhập
         </nuxt-link>
-      </div>
+      </div> -->
     </div>
     <a-drawer
       class="header-sidebar-drawer"
@@ -200,6 +200,7 @@ export default {
       this.$router.push("/");
     },
     handleScroll(event) {
+      console.log(window.scrollY);
       if (window.scrollY > 400) {
         this.isShowHeader = true;
       } else {
@@ -236,14 +237,14 @@ export default {
     },
     scrollToService() {
       window.scrollTo({
-        top: 3684,
+        top: 3525,
         left: 0,
         behavior: "smooth",
       });
     },
     scrollToBottom() {
       window.scrollTo({
-        top: 4728,
+        top: 4662,
         left: 0,
         behavior: "smooth",
       });
