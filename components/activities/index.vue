@@ -1,9 +1,9 @@
 <template>
   <div class="mt-12 bg-white p-4 rounded-sm shadow-md pt-10">
     <div class="text-center mb-9">
-      <h3 class="title-content">CÁC HOẠT ĐỘNG NỔI BẬT</h3>
+      <h3 class="title-content">HIGHLIGHTS ACTIVITIES</h3>
       <span class="title-sub-content">
-        Tham gia ngay các hoạt động nổi bật, hấp dẫn
+        Join now the outstanding and attractive activities
       </span>
     </div>
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

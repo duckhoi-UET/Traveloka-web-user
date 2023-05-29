@@ -1,10 +1,10 @@
 <template>
   <div class="mt-12 bg-white p-4 rounded-sm shadow-md pt-10">
     <div class="text-center mb-9">
-      <h3 class="title-content">ĐIỂM ĐẾN HẤP DẪN</h3>
+      <h3 class="title-content">APPEALING DESTINATION</h3>
       <span class="title-sub-content">
-        Khám phá ngay các tour, hoạt động du lịch và địa điểm tham quan cho hành
-        trình du lịch của bạn
+        Instantly discover tours, activities and attractions for your travel
+        itinerary
       </span>
     </div>
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -61,3 +61,4 @@ export default {
 </script>
 
 <style></style>
+

@@ -19,48 +19,48 @@ export const FOOTER = {
 
 export const FOOER_OPTIONS = [
   {
-    title: "Giới thiệu ",
+    title: "About us",
     links: [
       {
-        label: "Về chúng tôi",
+        label: "Introduce ",
         value: "/about",
       },
       {
-        label: "Chính sách giao dịch chung",
+        label: "General trading policy",
         value: FOOTER.TRANSACTION_POLICY,
       },
       {
-        label: "Chính sách trả phòng",
+        label: "Check-out policy",
         value: FOOTER.RETURN_POLICY,
       },
       {
-        label: "Chính sách bảo mật",
+        label: "Privacy Policy",
         value: FOOTER.PRIVACY_POLICY,
       },
 
       {
-        label: "Chính sách giải quyết khiếu nại",
+        label: "Complaint handling policy",
         value: FOOTER.COMPLAINT_POLICY,
       },
     ],
   },
   {
-    title: "Thông tin hướng dẫn",
+    title: "Information guide us",
     links: [
       {
         label: "Blog ",
         value: FOOTER.BLOG,
       },
       {
-        label: "Kiếm tiền cùng ",
+        label: "Make money with",
         value: FOOTER.EARNING,
       },
       {
-        label: "Câu hỏi thường gặp",
+        label: "Frequently asked questions",
         value: FOOTER.FAQ,
       },
       {
-        label: "Trung tâm hỗ trợ",
+        label: "Support center",
         value: FOOTER.SUPPORT_CENTER,
       },
     ],

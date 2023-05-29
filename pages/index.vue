@@ -6,10 +6,10 @@
       >
         <img src="/images/icon/1.png" class="w-16 object-contain" alt="" />
         <div>
-          <h3 class="text-xl text-blue-60 mb-0">Đảm bảo giá tốt nhất</h3>
+          <h3 class="text-xl text-blue-60 mb-0">Best price guarantee</h3>
           <span class="text-blue-60"
-            >Chúng tôi đảm bảo khách hàng sẽ đặt được dịch vụ với giá tốt nhất,
-            những chương trình khuyến mãi hấp dẫn nhất</span
+            >We guarantee that customers will receive the service at the best
+            price available, along with the most attractive promotions</span
           >
         </div>
       </div>
@@ -19,22 +19,21 @@
         <img src="/images/icon/2.png" class="w-16 object-contain" alt="" />
         <div>
           <h3 class="text-xl text-blue-60 mb-0">
-            Dịch vụ tin cậy - Giá trị đích thực
+            Reliable service - True value
           </h3>
           <span class="text-blue-60"
-            >Đặt lợi ích khách hàng lên trên hết, chúng tôi hỗ trợ khách hàng
-            nhanh và chính xác nhất với dịch vụ tin cậy, giá trị đích
-            thực.</span
+            >By prioritizing customer interests, we provide fast and accurate
+            support with reliable service and true value</span
           >
         </div>
       </div>
       <div class="flex md:flex-col flex-row lg:flex-row gap-4 justify-center">
         <img src="/images/icon/3.png" class="w-16 object-contain" alt="" />
         <div>
-          <h3 class="text-xl text-blue-60 mb-0">Đảm bảo chất lượng</h3>
+          <h3 class="text-xl text-blue-60 mb-0">Quality assurance</h3>
           <span class="text-blue-60"
-            >Chúng tôi liên kết chặt chẽ với các đối tác, khảo sát định kỳ để
-            đảm bảo chất lượng tốt nhất của dịch vụ</span
+            >We maintain close partnerships and conduct regular surveys to
+            ensure the highest quality of service</span
           >
         </div>
       </div>
@@ -42,13 +41,13 @@
 
     <AttractivePlace></AttractivePlace>
     <FavoriteTour></FavoriteTour>
-    <div class="mt-6">
+    <!-- <div class="mt-6">
       <img
         class="rounded-md"
         src="/images/Ads/1679649185156-d1f0ae436ff244b389556b428a0d0a17.png"
         alt=""
       />
-    </div>
+    </div> -->
     <Activities />
     <TravelGuide></TravelGuide>
     <Services />
@@ -80,3 +79,4 @@ export default {
   },
 };
 </script>
+

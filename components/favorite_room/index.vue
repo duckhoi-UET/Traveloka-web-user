@@ -1,10 +1,8 @@
 <template>
   <div class="mt-12 bg-white p-4 rounded-sm shadow-md pt-10">
     <div class="text-center mb-9">
-      <h3 class="title-content">CÁC PHÒNG NỔI BẬT</h3>
-      <span class="title-sub-content">
-        Các phòng được đặt nhiều nhất trong tháng này
-      </span>
+      <h3 class="title-content">COMMONLY CHOSEN ROOMS</h3>
+      <span class="title-sub-content"> Most booked rooms on this month </span>
     </div>
     <Slider>
       <template v-slot:slider>
@@ -27,7 +25,7 @@
         class="border border-blue-60 font-semibold px-10 py-2 rounded-lg hover:bg-blue-60 hover:text-white"
         @click="goToAllRooms"
       >
-        Xem tất cả
+        Show all
       </span>
     </div>
   </div>
@@ -123,3 +121,4 @@ export default {
 </script>
 
 <style></style>
+

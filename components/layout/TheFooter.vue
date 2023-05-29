@@ -37,12 +37,12 @@
             <div
               class="mt-4 text-base md:text-xl uppercase text-[#eee] font-semibold text-center"
             >
-              Tải ứng dụng
+              Download app
             </div>
           </div>
           <div class="space-y-2">
             <div class="font-semibold text-base md:text-xl text-[#eee]">
-              Liên hệ
+              Contact us
             </div>
             <div class="!text-[#888] text-lg">
               Hotline: <a href="tel:0962462692">098 112 57 68</a>
@@ -76,7 +76,7 @@
         </div>
         <div class="column flex flex-col gap-5">
           <div class="font-semibold text-base md:text-xl text-[#eee] uppercase">
-            Theo dõi chúng tôi
+            Follow us
           </div>
 
           <div class="socials flex gap-6 text-3xl">
@@ -131,13 +131,11 @@
           <div class="details gap-3">
             <div class="above gap-3 lg:gap-10">
               <div class="mst !text-[#888] text-lg">
-                Địa chỉ: Ninh Hải, Ninh Bình, Vietnam
+                Address: Ninh Hai, Ninh Binh, Vietnam
               </div>
-              <div class="issued-by !text-[#888] text-lg">
-                Khu nghỉ dưỡng/Khách sạn
-              </div>
+              <div class="issued-by !text-[#888] text-lg">Resort/Hotel</div>
               <div class="issued-at !text-[#888] text-lg">
-                Số điện thoại: <a href="tel:0962462692 "> 098 112 57 68</a>
+                Phone number: <a href="tel:0962462692 "> 098 112 57 68</a>
               </div>
             </div>
             <div class="!text-[#888] text-lg">
@@ -175,3 +173,4 @@ export default {
   //   },
 };
 </script>
+

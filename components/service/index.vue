@@ -1,13 +1,13 @@
 <template>
   <div class="mt-12">
     <div class="text-center mb-6">
-      <h3 class="title-content uppercase text-center">Dịch vụ và ẩm thực</h3>
-      <span class="title-sub-content">
+      <h3 class="title-content uppercase text-center">SERVICES AND FOOD</h3>
+      <!-- <span class="title-sub-content">
         Trải nghiệm các dịch vụ tiện ích và ẩm thực tại đây
-      </span>
+      </span> -->
     </div>
     <div>
-      <h3 class="text-3xl capitalize">Dịch vụ</h3>
+      <h3 class="text-3xl capitalize">Services</h3>
       <div class="flex flex-wrap gap-6">
         <div v-for="(item, index) in service" :key="index">
           <div class="w-[350px] h-[250px] relative">
@@ -26,7 +26,7 @@
       </div>
     </div>
     <div class="mt-4">
-      <h3 class="text-3xl capitalize">Ẩm thực</h3>
+      <h3 class="text-3xl capitalize">Foods</h3>
       <div v-for="(item, index) in foots" :key="index">
         <div class="max-w-[900px] mx-auto underline">
           <h3 class="text-[22px] italic">{{ item.title }}</h3>
@@ -54,27 +54,27 @@ export default {
     return {
       service: [
         {
-          title: "Nhà Hàng",
+          title: "Restaurant",
           image: "/images/service/image6.png",
         },
         {
-          title: "Thuê xe đạp/xe máy",
+          title: "Bicycle/motorcycle rental",
           image: "/images/service/image5.jpg",
         },
         {
-          title: "Xe limousine",
+          title: "Limousine car",
           image: "/images/service/image3.png",
         },
       ],
       foots: [
         {
-          title: "Thịt dê",
-          desc: "Được chăn thả bên trên những ngọn núi đá nên thịt dê ở Ninh Bình vô cùng săn chắc và dai nên du khách đến Ninh Bình nhất định phải thử món ăn này một lần. Trong khi thịt dê ở đây còn được chế biến ra nhiều món ăn ngon với những cách chế biến không giống nhau như làm thành nem dê, dê hấp, dê nướng hay nổi tiếng nhất là dê tương gừng - một món ăn cực kỳ giàu dinh dưỡng. Nhiều người cũng bảo rằng thịt dê còn có thể chữa được rất nhiều loại bệnh, nên đến Ninh Bình nếu có cơ hội bạn chớ bỏ lỡ thịt dê núi nức tiếng nơi đây.",
+          title: "Goat meat",
+          desc: "Grazed on the rocky mountains, is a specialty in Ninh Binh known for its firm and robust texture. Visitors to Ninh Binh are encouraged to try this dish at least once. The local cuisine offers a variety of delicious goat meat dishes prepared in different ways, such as goat rolls, steamed goats, grilled goats, and the renowned goats with ginger sauce, which is not only flavorful but also highly nutritious. It is often believed that goat meat possesses healing properties and can help with various ailments. When you visit Ninh Binh, don't miss the opportunity to savor the famous mountain goat meat delicacy.",
           image: "/images/foot/image7.png",
         },
         {
-          title: "Cơm cháy",
-          desc: "Nhắc đến đặc sản Ninh Bình không thể bỏ qua món cơm cháy ruốc thơm ngon. Điều làm nên sự đặc biệt của món cơm cháy này là người chế biến phải thực hiện vô cùng tỉ mỉ trong từng khâu thực hiện. Cơm cháy phải làm từ những loại gạo ngon và đem nếu vừa phải tới khi chín giòn đúng chuẩn.",
+          title: "Fried rice",
+          desc: "When it comes to Ninh Binh specialties, one cannot overlook the delicious fried rice. What sets this dish apart is the meticulous process it requires at every stage of preparation. The key lies in using high-quality rice and skillfully controlling the heat to achieve the perfect balance of texture and flavor in the crispy rice",
           image: "/images/foot/image2.png",
         },
       ],

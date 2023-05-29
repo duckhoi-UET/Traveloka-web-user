@@ -1,9 +1,9 @@
 <template>
   <div class="mt-12">
     <div class="text-center mb-9">
-      <h3 class="title-content">CẨM NANG DU LỊCH</h3>
+      <h3 class="title-content">TRAVEL GUIDEBOOK</h3>
       <span class="title-sub-content">
-        Những kinh nghiệm thú vị về du lịch được chia sẻ ở đây
+        Interesting travel experiences are shared here
       </span>
     </div>
     <Slider :autoPlay="false">
@@ -82,3 +82,4 @@ export default {
 </script>
 
 <style></style>
+

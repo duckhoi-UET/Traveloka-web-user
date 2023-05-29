@@ -29,35 +29,35 @@
         :class="{ 'text-white drop-shadow-lg': !isShowHeader }"
         @click="scrollToPlace"
       >
-        <span class="hidden md:inline">Điểm đến</span>
+        <span class="hidden md:inline">Destination</span>
       </div>
       <div
         class="font-semibold cursor-pointer hover:underline"
         :class="{ 'text-white drop-shadow-lg': !isShowHeader }"
         @click="scrollToRooms"
       >
-        <span class="hidden md:inline">Phòng</span>
+        <span class="hidden md:inline">Rooms</span>
       </div>
       <div
         class="font-semibold cursor-pointer hover:underline"
         :class="{ 'text-white drop-shadow-lg': !isShowHeader }"
         @click="scrollToActivities"
       >
-        <span class="hidden md:inline">Hoạt động</span>
+        <span class="hidden md:inline">Activities</span>
       </div>
       <div
         class="font-semibold cursor-pointer hover:underline"
         :class="{ 'text-white drop-shadow-lg': !isShowHeader }"
         @click="scrollToNews"
       >
-        <span class="hidden md:inline">Tin tức</span>
+        <span class="hidden md:inline">News</span>
       </div>
       <div
         class="font-semibold cursor-pointer hover:underline"
         :class="{ 'text-white drop-shadow-lg': !isShowHeader }"
         @click="scrollToService"
       >
-        <span class="hidden md:inline">Dịch vụ</span>
+        <span class="hidden md:inline">Services</span>
       </div>
       <div
         class="font-semibold cursor-pointer hover:underline"
@@ -65,7 +65,7 @@
         @click="scrollToBottom"
       >
         <!-- <i class="fas fa-question-circle" /> -->
-        <span class="hidden md:inline">Trợ giúp</span>
+        <span class="hidden md:inline">Help</span>
       </div>
 
       <!-- <div
@@ -271,3 +271,4 @@ export default {
   }
 }
 </style>
+
