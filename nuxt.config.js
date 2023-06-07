@@ -84,31 +84,35 @@ export default {
     strategies: {
       local: {
         token: {
-          property: "data.idToken",
-          type: "Bearer",
-          name: "Authorization",
-          maxAge: 3600,
+          property: "token",
+          global: true,
         },
-        refreshToken: {
-          property: "data.refreshToken",
-          data: "refresh_token",
-          maxAge: 30 * 24 * 60 * 60,
-        },
+        autoLogout: false,
         user: {
-          property: "data",
+          property: "user",
+          autoFetch: true,
         },
         endpoints: {
-          login: false,
-          logout: false,
-          user: false,
+          login: {
+            url: `/login`,
+            method: "POST",
+          },
+          logout: {
+            url: `/logout`,
+            method: "GET",
+          },
+          user: {
+            url: `/me`,
+            method: "GET",
+          },
+        },
+        redirect: {
+          login: "/login",
+          logout: "/",
+          callback: "/login",
+          home: "/",
         },
       },
-    },
-    redirect: {
-      login: "/login",
-      logout: "/",
-      callback: "/login",
-      home: "/",
     },
   },
 

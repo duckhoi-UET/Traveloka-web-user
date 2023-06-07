@@ -39,29 +39,31 @@ export default {
   },
 
   methods: {
-    async login(form) {
-      try {
-        this.loading = true;
-        const response = await this.$axios.post(
-          `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${process.env.API_KEY_FIREBASE}`,
-          { ...form, returnSecureToken: true }
-        );
-        if (response) {
-          const { idToken } = response.data;
-          this.$auth.setUserToken(idToken);
-          this.$auth.setStrategy("local");
-          this.$auth.setUser(response.data);
-          sessionStorage.setItem("user", JSON.stringify(response.data));
+    login(form) {
+      this.loading = true;
+      this.$auth
+        .loginWith("local", {
+          data: {
+            ...form,
+          },
+        })
+        .then(async () => {
           this.$router.push("/");
           this.$message.success("Đăng nhập thành công");
-        }
-      } catch (error) {
-        this.$message.error(
-          "Email hoặc mật khẩu không chính xác, vui lòng thử lại!"
-        );
-      } finally {
-        this.loading = false;
-      }
+        })
+        .catch((error) => {
+          this.$handleError(error, (_error) => {
+            const errorData = _error?.response?.data;
+
+            if (errorData?.code === 401) {
+              this.error = "Tên đăng nhập hoặc mật khẩu không chính xác";
+              this.$forceUpdate();
+            }
+          });
+        })
+        .finally(() => {
+          this.loading = false;
+        });
     },
   },
 
@@ -72,3 +74,4 @@ export default {
   },
 };
 </script>
+

@@ -5,9 +5,9 @@
     :rules="rules"
     class="login-form space-y-4"
   >
-    <a-form-model-item prop="email">
+    <a-form-model-item prop="username">
       <a-input
-        v-model="form.email"
+        v-model="form.username"
         size="large"
         placeholder="Email"
         @keyup.native.enter="handleSubmit"
@@ -45,7 +45,7 @@
 import _cloneDeep from "lodash/cloneDeep";
 
 const defaultForm = {
-  email: "",
+  username: "",
   password: "",
 };
 
@@ -61,7 +61,7 @@ export default {
     return {
       form: _cloneDeep(defaultForm),
       rules: {
-        email: [
+        username: [
           {
             required: true,
             message: "Vui lòng nhập tên đăng nhập",
@@ -98,3 +98,4 @@ export default {
   }
 }
 </style>
+

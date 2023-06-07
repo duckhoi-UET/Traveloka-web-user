@@ -68,14 +68,15 @@
         <span class="hidden md:inline">Help</span>
       </div>
 
-      <!-- <div
+      <div
         :class="isShowHeader ? 'text-warning-100' : 'text-white drop-shadow-lg'"
       >
         <i class="fas fa-bell text-lg" />
-      </div> -->
+      </div>
       <div></div>
       <div class="flex items-center gap-2" v-if="$auth.loggedIn">
-        <a-avatar>
+        <a-avatar v-if="authUser?.avatar" :src="authUser.avatar"> </a-avatar>
+        <a-avatar v-else>
           <i class="fas fa-user" />
         </a-avatar>
         <a-dropdown :trigger="['click']">
@@ -85,14 +86,14 @@
               isShowHeader ? 'text-gray-100' : 'text-white drop-shadow-lg'
             "
           >
-            {{ $auth.user.displayName }}
+            {{ authUser.fullName }}
             <i class="fas fa-chevron-down" />
           </div>
           <template #overlay>
             <a-menu class="!mt-3">
-              <!-- <a-menu-item class="!py-2" @click="$refs.updateInfoDialog.open()">
+              <a-menu-item class="!py-2" @click="$refs.updateInfoDialog.open()">
                 <i class="mr-4 fas fa-user" />Cập nhật thông tin
-              </a-menu-item> -->
+              </a-menu-item>
               <a-menu-item
                 class="!py-2"
                 @click="$refs.updatePasswordDialog.open()"
@@ -106,7 +107,7 @@
           </template>
         </a-dropdown>
       </div>
-      <!-- <div v-else class="flex items-center gap-6">
+      <div v-else class="flex items-center gap-6">
         <nuxt-link
           class="font-bold !text-white !hover:text-red"
           :class="isShowHeader ? '' : ' drop-shadow-lg'"
@@ -127,7 +128,7 @@
         >
           Đăng Nhập
         </nuxt-link>
-      </div> -->
+      </div>
     </div>
     <a-drawer
       class="header-sidebar-drawer"
